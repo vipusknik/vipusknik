@@ -1,11 +1,13 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+import 'babel-polyfill';
 require('./bootstrap');
+
+window.Vue = require('vue');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -13,7 +15,7 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+// Vue.component('sm-md-main-menu', require('./components/UI/SmMdMainMenu.vue'));
 
 const app = new Vue({
     el: '#app'
