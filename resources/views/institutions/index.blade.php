@@ -37,7 +37,7 @@
 
                         {{-- меню --}}
                         <menu class="absolute z-20 w-64 h-full bg-blue-dark m-0 p-0 md:p-3 md:w-1/2">
-                            <a href="" class="block no-underline px-6 py-2 hover:bg-blue-darker">
+                            <a href="/institutions/universities" class="block no-underline px-6 py-2 hover:bg-blue-darker">
                                 <div class="flex items-center text-white">
                                     <div class="w-12 flex-no-shrink mr-3">
                                         <svg class="inline-block fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.463 37.463"><path d="M36.355 29.542v-7.679l-1.01-6.055h-9.622l3.126 2.338v3.704l-2.018-1.493v.735h-.599v8.448h-.624v-9.257h.599v-1.112h-.925l-7.014-5.162-6.774 5.287h-.821v1.114h.675v9.131h-.658v-8.322h-.675v-.466l-1.434 1.191v-3.779l2.873-2.356H1.502l-1.01 6.055v7.678H0v2.902h37.463v-2.902h-1.108zM4.93 28.044H1.583v-1.832H4.93v1.832zm0-2.926H1.583v-1.83H4.93v1.83zm1.388 2.926v-1.832h3.346v1.832H6.318zm.001-2.926v-1.83h3.346v1.83H6.319zm12.077-8.84a1.326 1.326 0 1 1 0 2.653 1.326 1.326 0 0 1 0-2.653zm5.388 13.262h-.735v-8.358h-9.507v8.358h-.666v-9.131h.64v-.43h9.852v.304h.416v9.257zm6.402-1.686H26.84v-1.832h3.346v1.832zm0-2.927H26.84v-1.83h3.346v1.83zm4.735 2.927h-3.346v-1.832h3.346v1.832zm0-2.927h-3.346v-1.83h3.346v1.83zM18.295 10.875h-.204V5.41h.427v.104c.468.204 1.601.591 2.239-.101.817-.885 2.248 0 2.248 0v2.522s-1.158-.953-2.248 0c-.829.724-1.814.347-2.239.124v2.816h-.221l9.928 7.425v2.111l-10.042-7.427-8.945 7.427V18.3l9.057-7.425z"/></svg>
@@ -46,32 +46,32 @@
                                 </div>
                             </a>
 
-                            <a href="" class="block no-underline px-6 py-2 hover:bg-blue-darker">
+                            <a href="/institutions/colleges" class="block no-underline px-6 py-2 hover:bg-blue-darker">
                                 <div class="flex items-center text-white">
                                     <div class="w-12 flex-no-shrink mr-3">
                                         <svg class="inline-block fill-current w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M181 120.86h30v30h-30zM241 120.86h30v30h-30zM301 120.86h30v30h-30z"/><path d="M512 210.865v-84.322L256 .135 0 126.542v84.322h60v150H30v60H0v91l512 .001v-91h-30v-60h-30v-150h60zm-327.735 271H30v-31h161.951l-7.686 31zm15.124-61H60v-30h146.827l-7.438 30zM90 360.865v-150h31v150H90zm121 0h-60v-150h60v150zm4.173 121l22.562-91h36.529l22.563 91h-81.654zm25.827-121v-150h30v150h-30zm64.173 30H452v30H312.611l-7.438-30zm-4.173-30v-150h60v150h-60zm90 0v-150h31v150h-31zm91 90v31H327.735l-7.686-31H482zm-452-270v-35.678L256 33.594l226 111.593v35.678H30z"/></svg>
                                     </div>
-                                    <span class="flex-1 min-w-0 text-lg mt-2">Колледжи</span>
+                                    <span class="flex-1 min-w-0 text-lg">Колледжи</span>
                                 </div>
                             </a>
 
-                            <a href="" class="block no-underline px-6 py-2 hover:bg-blue-darker">
+                            <a href="/specialties/directions" class="block no-underline px-6 py-2 hover:bg-blue-darker">
                                 <div class="flex items-center text-white">
                                     <div class="w-12 flex-no-shrink mr-3">
                                         <svg class="inline-block fill-current w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M3.33 8L10 12l10-6-10-6L0 6h10v2H3.33zM0 8v8l2-2.22V9.2L0 8zm10 12l-5-3-2-1.2v-6l7 4.2 7-4.2v6L10 20z"/></svg>
                                     </div>
 
-                                    <div class="flex-1 min-w-0 text-lg mt-2">Специальности</div>
+                                    <div class="flex-1 min-w-0 text-lg">Специальности</div>
                                 </div>
                             </a>
 
-                            <a href="" class="block no-underline px-6 py-2 hover:bg-blue-darker">
+                            <a href="/ent" class="block no-underline px-6 py-2 hover:bg-blue-darker">
                                 <div class="flex items-center text-white">
                                     <div class="w-12 flex-no-shrink mr-3">
                                         <svg class="inline-block fill-current w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 416 416"><path d="M72.103 175.999v32h171.713l20.287-20.285v-11.715zM72.103 239.999v32h107.711l32.002-32zM72.104 303.998h96v32h-96zM403.212 139.108l-22.628-22.627c-6.245-6.245-16.381-6.245-22.626 0l-16.877 16.877 45.255 45.255 16.876-16.877c6.247-6.246 6.247-16.382 0-22.628z"/><path d="M329.797 144.7c-57.43 57.431-74.356 74.298-145.694 145.638V336c38.518-.001 28.774.017 44.917-.07l10.239-10.239 56.844-56.819V384h-256V96h32.002v32h191.998V96h32v59.717l32-31.999V96c0-17.674-14.326-32-32-32h-44.424c-5.926-6.583-13.538-11.62-22.284-14.136-7.368-2.118-13.038-7.788-15.156-15.156C208.474 14.664 190.001 0 168.103 0c-21.898 0-40.37 14.664-46.136 34.707-2.121 7.376-7.805 13.039-15.181 15.164-8.738 2.518-16.342 7.55-22.262 14.129H40.103c-17.673 0-32 14.326-32 32v288c0 17.673 14.327 32 32 32h256c17.674 0 32-14.327 32-32V236.885l46.95-46.93-45.256-45.255zM222.354 319.967c-5.962.034-6.66.034-21.938.032l-.313.001v-23.036l5.214-5.215 22.627 22.628-5.59 5.59zM168.308 31.999c8.837 0 16 7.163 16 16 0 8.836-7.163 16-16 16s-16-7.164-16-16c0-8.837 7.164-16 16-16z"/></svg>
                                     </div>
 
-                                    <div class="flex-1 min-w-0 text-lg mt-2">ЕНТ</div>
+                                    <div class="flex-1 min-w-0 text-lg">ЕНТ</div>
                                 </div>
                             </a>
                         </menu>
@@ -87,35 +87,40 @@
                         {{-- поисковое меню --}}
                         <div class="absolute z-10 w-full bg-orange">
                             <div class="container mx-auto p-3">
-                                <select class="block w-full mb-4 text-grey px-6 styled-select" style="padding-top: .937rem; padding-bottom: .937rem;">
-                                    <option value="">Название учебного заведения...</option>
-                                    <option value="spring">весна</option>
-                                    <option value="summer">лето</option>
-                                    <option value="autumn">осень</option>
-                                    <option value="winter">зима</option>
-                                </select>
+                                <form action="{{ route('institutions.index', $institutionType) }}" method="get">
+                                    <input type="text"
+                                           name="query"
+                                           value="{{ request('query') }}"
+                                           placeholder="Название учебного заведения..."
+                                           class="block w-full mb-4 text-grey px-6 placeholder-text-grey-dark"
+                                           style="padding-top: .937rem; padding-bottom: .937rem;">
 
-                                <select class="block w-full mb-4 text-grey px-6 styled-select" style="padding-top: .937rem; padding-bottom: .937rem;">
-                                    <option value="">Специальности, квалификации</option>
-                                    <option value="spring">весна</option>
-                                    <option value="summer">лето</option>
-                                    <option value="autumn">осень</option>
-                                    <option value="winter">зима</option>
-                                </select>
-
-                                <div class="flex">
-                                    <select class="flex-1 min-w-0 text-grey mr-2 px-6 styled-select" style="padding-top: .937rem; padding-bottom: .937rem;">
-                                        <option value="">Город</option>
-                                        <option value="spring">весна</option>
-                                        <option value="summer">лето</option>
-                                        <option value="autumn">осень</option>
-                                        <option value="winter">зима</option>
+                                    <select class="block w-full mb-4 text-grey px-6 styled-select" name="specialty" style="padding-top: .937rem; padding-bottom: .937rem;">
+                                        <option value="">
+                                            Специальности{{ $institutionType == 'colleges' ? ', квалификации' : '' }}
+                                        </option>
+                                        @foreach ($specialties as $specialty)
+                                            <option value="{{ $specialty->id }}" {{ request('specialty') == $specialty->id ? 'selected' : '' }}>
+                                                {{ $specialty->title }} ({{ $specialty->code }})
+                                            </option>
+                                        @endforeach
                                     </select>
 
-                                    <button class="block w-12 flex-no-shrink bg-blue-dark">
-                                        <svg class="inline-block h-6 w-8 mt-1 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/></svg>
-                                    </button>
-                                </div>
+                                    <div class="flex">
+                                        <select class="flex-1 min-w-0 text-grey mr-2 px-6 styled-select" name="city" style="padding-top: .937rem; padding-bottom: .937rem;">
+                                            <option value="">Город</option>
+                                            @foreach ($cities as $city)
+                                                <option value="{{ $city->id }}" {{ request('city') == $city->id ? 'selected' : '' }}>
+                                                    {{ $city->title }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+
+                                        <button class="block w-12 flex-no-shrink bg-blue-dark">
+                                            <svg class="inline-block h-6 w-8 mt-1 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/></svg>
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -140,12 +145,14 @@
 
                     <div class="flex pb-3 pt-5 px-5 border border-t-none border-blue-dark" style="margin-top: -1.125rem; border-width: 1.3px; border-top-width: 0px;">
                         <div class="mr-2">
-                            <img src="http://mustim09.beget.tech/storage/389/8cca0jpg.jpeg" alt="" class="block w-24">
+                            <a href="#" class="block">
+                                <img src="http://mustim09.beget.tech/storage/389/8cca0jpg.jpeg" alt="" class="block w-24">
+                            </a>
                         </div>
 
                         <div class="self-end">
-                            <div class="text-blue-dark text-center mb-2">
-                                Академический инновационный университет
+                            <div class="text-center mb-2">
+                                <a href="#" class="text-blue-dark no-underline">Академический инновационный университет</a>
                             </div>
 
                             <div class="text-sm text-center text-grey-dark">

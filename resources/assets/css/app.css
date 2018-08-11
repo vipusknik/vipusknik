@@ -92,3 +92,7 @@ button:focus {
  .bg-transparent-40 {
     background: rgba(255, 255, 255, 0.4);
  }
+
+.placeholder-text-grey-dark::placeholder {
+    @apply text-grey-dark;
+}
