@@ -17,6 +17,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
+    "flickity": "^2.1.2",
     "vue": "^2.5.17"
   }
 }

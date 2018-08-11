@@ -15,7 +15,7 @@ window.Vue = require('vue')
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-// Vue.component('sm-md-main-menu', require('./components/UI/SmMdMainMenu.vue'));
+Vue.component('institution-promo-carousel', require('./components/InstitutionPromoCarousel.vue'))
 
 const app = new Vue({
     el: '#app',

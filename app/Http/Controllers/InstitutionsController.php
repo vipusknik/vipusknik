@@ -31,8 +31,7 @@ class InstitutionsController extends Controller
         $cities = City::all()->sortBy('title');
 
         $specialties = Specialty::of($institutionType)
-            ->getOnly('specialties')
-            ->orderBy('title')
+            ->orderBy('code')
             ->get();
 
         return view('institutions.index', compact('institutions', 'cities', 'specialties'));
