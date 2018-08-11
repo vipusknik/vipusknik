@@ -57,6 +57,10 @@ button:focus {
     display: none;
 }
 
+.font-cuprum {
+    font-family: 'Cuprum', 'sans-serif';
+}
+
 /**
  * Here you would add any custom utilities you need that don't come out of the
  * box with Tailwind.
@@ -71,3 +75,20 @@ button:focus {
  * @import "utilities/background-patterns";
  * @import "utilities/skew-transforms";
  */
+
+ .styled-select {
+     background-image: url(/img/icons/down-arrow.svg);
+     background-size: 3rem .812rem;
+     @apply bg-right bg-no-repeat appearance-none;
+ }
+
+ @-moz-document url-prefix() {
+     .styled-select {
+         background-size: 1.25rem 1rem;
+         background-position-x: 97%;
+     }
+ }
+
+ .bg-transparent-40 {
+    background: rgba(255, 255, 255, 0.4);
+ }

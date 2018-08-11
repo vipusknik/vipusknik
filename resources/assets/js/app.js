@@ -4,10 +4,10 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-import 'babel-polyfill';
-require('./bootstrap');
+import 'babel-polyfill'
+require('./bootstrap')
 
-window.Vue = require('vue');
+window.Vue = require('vue')
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -18,5 +18,11 @@ window.Vue = require('vue');
 // Vue.component('sm-md-main-menu', require('./components/UI/SmMdMainMenu.vue'));
 
 const app = new Vue({
-    el: '#app'
-});
+    el: '#app',
+    data() {
+        return {
+            showNavMenu: false,
+            showSearchMenu: false
+        }
+    }
+})

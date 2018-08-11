@@ -1,0 +1,30 @@
+#feedback-form > input {
+    width: 300px;
+}
+
+#feedback-form textarea {
+    margin-bottom: 11px;
+    border-radius: 3px;
+    font-size: 16px;
+    width: 300px;
+    border-width: 0;
+    padding: 13px;
+}
+
+.remodalBorder {
+    width: 397px !important;
+}
+
+#feedback-form button {
+    background-color: #FF8A21; text-align: center;
+}
+
+#feedback-form button:hover {
+    background-color: #2ecc71;
+    transition: background-color 0.2s ease;
+}
+
+#feedback-form center {
+    color: #C7D9E7;
+    font-size: 16px;
+}
