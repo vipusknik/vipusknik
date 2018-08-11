@@ -36,7 +36,7 @@
                         <div @click.self="showNavMenu = false" class="absolute z-20 w-full h-full bg-transparent-40"></div>
 
                         {{-- menu --}}
-                        <menu class="absolute z-20 w-64 h-full bg-blue-dark m-0 p-0 md:w-1/2">
+                        <menu class="absolute z-20 w-64 h-full bg-blue-dark m-0 p-0 md:p-3 md:w-1/2">
                             <a href="" class="block no-underline px-6 py-2 hover:bg-blue-darker">
                                 <div class="flex items-center text-white">
                                     <div class="w-12 flex-no-shrink mr-3">
@@ -80,36 +80,42 @@
 
                 {{-- Dropdown search menu--}}
                 <div v-if="showSearchMenu" class="relative">
-                    <div class="absolute z-10 pin-t w-full bg-orange">
-                        <div class="container mx-auto p-3">
-                            <select class="block w-full mb-4 text-grey px-6 styled-select" style="padding-top: .937rem; padding-bottom: .937rem;">
-                                <option value="">Название учебного заведения...</option>
-                                <option value="spring">весна</option>
-                                <option value="summer">лето</option>
-                                <option value="autumn">осень</option>
-                                <option value="winter">зима</option>
-                            </select>
+                    <div class="absolute pin-t w-full h-screen">
+                        {{-- overlay --}}
+                        <div @click.self="showSearchMenu = false" class="absolute z-10 w-full h-full bg-transparent-40"></div>
 
-                            <select class="block w-full mb-4 text-grey px-6 styled-select" style="padding-top: .937rem; padding-bottom: .937rem;">
-                                <option value="">Специальности, квалификации</option>
-                                <option value="spring">весна</option>
-                                <option value="summer">лето</option>
-                                <option value="autumn">осень</option>
-                                <option value="winter">зима</option>
-                            </select>
-
-                            <div class="flex">
-                                <select class="flex-1 min-w-0 text-grey mr-2 px-6 styled-select" style="padding-top: .937rem; padding-bottom: .937rem;">
-                                    <option value="">Город</option>
+                        {{-- search menu --}}
+                        <div class="absolute z-10 w-full bg-orange">
+                            <div class="container mx-auto p-3">
+                                <select class="block w-full mb-4 text-grey px-6 styled-select" style="padding-top: .937rem; padding-bottom: .937rem;">
+                                    <option value="">Название учебного заведения...</option>
                                     <option value="spring">весна</option>
                                     <option value="summer">лето</option>
                                     <option value="autumn">осень</option>
                                     <option value="winter">зима</option>
                                 </select>
 
-                                <button class="block w-12 flex-no-shrink bg-blue-dark">
-                                    <svg class="inline-block h-6 w-8 mt-1 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/></svg>
-                                </button>
+                                <select class="block w-full mb-4 text-grey px-6 styled-select" style="padding-top: .937rem; padding-bottom: .937rem;">
+                                    <option value="">Специальности, квалификации</option>
+                                    <option value="spring">весна</option>
+                                    <option value="summer">лето</option>
+                                    <option value="autumn">осень</option>
+                                    <option value="winter">зима</option>
+                                </select>
+
+                                <div class="flex">
+                                    <select class="flex-1 min-w-0 text-grey mr-2 px-6 styled-select" style="padding-top: .937rem; padding-bottom: .937rem;">
+                                        <option value="">Город</option>
+                                        <option value="spring">весна</option>
+                                        <option value="summer">лето</option>
+                                        <option value="autumn">осень</option>
+                                        <option value="winter">зима</option>
+                                    </select>
+
+                                    <button class="block w-12 flex-no-shrink bg-blue-dark">
+                                        <svg class="inline-block h-6 w-8 mt-1 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/></svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
