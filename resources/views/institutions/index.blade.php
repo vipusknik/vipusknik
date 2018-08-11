@@ -6,10 +6,10 @@
 
 @section('content')
     <div class="h-screen mb-10">
-        {{-- header for sm and md size devices --}}
+        {{-- Шапка для маленьких и средних экранов --}}
         <div class="flex mb-16">
             <header class="fixed z-10 w-full bg-blue-darker">
-                {{-- Fixed navbar --}}
+                {{-- Зафиксированная навигация --}}
                 <div class="container mx-auto">
                     <div class="flex justify-between items-center p-3">
                         <div class="mt-1">
@@ -29,13 +29,13 @@
                     </div>
                 </div>
 
-                {{-- Main left menu --}}
+                {{-- Главное левое меню --}}
                 <div v-if="showNavMenu" class="font-sans relative">
                     <div class="absolute w-full h-screen z-20">
-                        {{-- overlay --}}
+                        {{-- поддложка --}}
                         <div @click.self="showNavMenu = false" class="absolute z-20 w-full h-full bg-transparent-40"></div>
 
-                        {{-- menu --}}
+                        {{-- меню --}}
                         <menu class="absolute z-20 w-64 h-full bg-blue-dark m-0 p-0 md:p-3 md:w-1/2">
                             <a href="" class="block no-underline px-6 py-2 hover:bg-blue-darker">
                                 <div class="flex items-center text-white">
@@ -78,13 +78,13 @@
                     </div>
                 </div>
 
-                {{-- Dropdown search menu--}}
+                {{-- Выпадающее меню поиска --}}
                 <div v-if="showSearchMenu" class="relative">
                     <div class="absolute pin-t w-full h-screen">
-                        {{-- overlay --}}
+                        {{-- подложка --}}
                         <div @click.self="showSearchMenu = false" class="absolute z-10 w-full h-full bg-transparent-40"></div>
 
-                        {{-- search menu --}}
+                        {{-- поисковое меню --}}
                         <div class="absolute z-10 w-full bg-orange">
                             <div class="container mx-auto p-3">
                                 <select class="block w-full mb-4 text-grey px-6 styled-select" style="padding-top: .937rem; padding-bottom: .937rem;">
@@ -123,10 +123,11 @@
             </header>
         </div>
 
+        {{-- Контент страницы --}}
         <div>
             <main class="container mx-auto">
+                {{-- Топ вузы текущего года --}}]
                 <div class="p-3">
-                    {{-- Institutions list --}}
                     @foreach ($institutions as $institution)
                         <div class="flex mb-6">
                             <div class="w-12 flex-no-shrink mr-2 p-1">
