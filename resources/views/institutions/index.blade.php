@@ -125,9 +125,38 @@
 
         {{-- Контент страницы --}}
         <div>
-            <main class="container mx-auto">
-                {{-- Топ вузы текущего года --}}]
-                <div class="p-3">
+            <main class="container mx-auto py-3">
+                {{-- Реклама: топ вузы текущего года --}}
+                <div class="px-3 mb-8">
+                    <div class="flex">
+                        <div class="w-1/2 bg-blue-dark mr-2 mt-1" style="height: 1.3px"></div>
+
+                        <div class="flex-1 whitespace-no-wrap mr-2 text-xl text-blue-dark">
+                            Топ ВУЗы 2018
+                        </div>
+
+                        <div class="w-1/5 bg-blue-dark mt-1" style="height: 1.3px"></div>
+                    </div>
+
+                    <div class="flex pb-3 pt-5 px-5 border border-t-none border-blue-dark" style="margin-top: -1.125rem; border-width: 1.3px; border-top-width: 0px;">
+                        <div class="mr-2">
+                            <img src="http://mustim09.beget.tech/storage/389/8cca0jpg.jpeg" alt="" class="block w-24">
+                        </div>
+
+                        <div class="self-end">
+                            <div class="text-blue-dark text-center mb-2">
+                                Академический инновационный университет
+                            </div>
+
+                            <div class="text-sm text-center text-grey-dark">
+                                Город: Семей
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Список вузов --}}
+                <div class="px-3">
                     @foreach ($institutions as $institution)
                         <div class="flex mb-6">
                             <div class="w-12 flex-no-shrink mr-2 p-1">
