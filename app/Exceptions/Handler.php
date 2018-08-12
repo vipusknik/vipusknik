@@ -37,9 +37,9 @@ class Handler extends ExceptionHandler
          * Bug tracking via sentry
          */
 
-        if ($this->shouldReport($exception)) {
-            app('sentry')->captureException($exception);
-        }
+        // if ($this->shouldReport($exception)) {
+        //     app('sentry')->captureException($exception);
+        // }
 
         parent::report($exception);
     }
@@ -58,9 +58,9 @@ class Handler extends ExceptionHandler
          * Bug tracking via sentry
          */
 
-        if ($this->shouldReport($exception)) {
-            return response()->view('errors.500', [], 500);
-        }
+        // if ($this->shouldReport($exception)) {
+        //     return response()->view('errors.500', [], 500);
+        // }
 
         return parent::render($request, $exception);
     }
