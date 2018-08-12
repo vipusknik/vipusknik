@@ -96,11 +96,11 @@
                                            style="padding-top: .937rem; padding-bottom: .937rem;">
 
                                     <select class="block w-full mb-4 text-grey px-6 styled-select" name="specialty" style="padding-top: .937rem; padding-bottom: .937rem;">
-                                        <option value="">
+                                        <option value="" class="py-1 px-6">
                                             Специальности{{ $institutionType == 'colleges' ? ', квалификации' : '' }}
                                         </option>
                                         @foreach ($specialties as $specialty)
-                                            <option value="{{ $specialty->id }}" {{ request('specialty') == $specialty->id ? 'selected' : '' }}>
+                                            <option value="{{ $specialty->id }}" {{ request('specialty') == $specialty->id ? 'selected' : '' }} class="py-1 px-6">
                                                 {{ $specialty->title }} ({{ $specialty->code }})
                                             </option>
                                         @endforeach
@@ -108,9 +108,9 @@
 
                                     <div class="flex">
                                         <select class="flex-1 min-w-0 text-grey mr-2 px-6 styled-select" name="city" style="padding-top: .937rem; padding-bottom: .937rem;">
-                                            <option value="">Город</option>
+                                            <option value="" class="px-6 py-1">Город</option>
                                             @foreach ($cities as $city)
-                                                <option value="{{ $city->id }}" {{ request('city') == $city->id ? 'selected' : '' }}>
+                                                <option value="{{ $city->id }}" {{ request('city') == $city->id ? 'selected' : '' }} class="px-6 py-1">
                                                     {{ $city->title }}
                                                 </option>
                                             @endforeach

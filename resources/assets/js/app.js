@@ -16,6 +16,7 @@ window.Vue = require('vue')
  */
 
 Vue.component('institution-promo-carousel', require('./components/InstitutionPromoCarousel.vue'))
+Vue.component('cool-select', require('./components/CoolSelect.vue'))
 
 const app = new Vue({
     el: '#app',
