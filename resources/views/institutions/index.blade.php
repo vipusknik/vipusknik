@@ -7,7 +7,7 @@
 @section('content')
     <div class="h-screen mb-10">
         {{-- Шапка для маленьких и средних экранов --}}
-        <div class="flex mb-16">
+        <div class="flex mb-16 md:hidden">
             <header class="fixed z-10 w-full bg-blue-darker">
                 {{-- Зафиксированная навигация --}}
                 <div class="container mx-auto">
@@ -126,6 +126,35 @@
                     </div>
                 </div>
             </header>
+        </div>
+
+        {{--Шапка для больших экранов --}}
+        <div class="hidden md:block bg-blue-darker font-sans">
+            <div class="container mx-auto">
+                <header class="flex">
+                    <div class="w-1/4 py-3 px-6">
+                        <a href="#">
+                            <img src="{{ asset('/img/vipusknik_logo.png') }}" alt="vipusknik.kz" class="h-6 w-auto lg:h-8">
+                        </a>
+                    </div>
+                    <div class="w-1/2">
+                        <div class="flex h-full">
+                            <a href="#" class="flex items-center px-6 text-lg text-white font-semibold no-underline hover:bg-blue-dark">
+                                Университеты
+                            </a>
+                            <a href="#" class="flex items-center px-6 text-lg text-white font-semibold no-underline hover:bg-blue-dark">
+                                Колледжи
+                            </a>
+                            <a href="#" class="flex items-center px-6 text-lg text-white font-semibold no-underline hover:bg-blue-dark">
+                                Специальности
+                            </a>
+                            <a href="#" class="flex items-center px-6 text-lg text-white font-semibold no-underline hover:bg-blue-dark">
+                                ЕНТ
+                            </a>
+                        </div>
+                    </div>
+                </header>
+            </div>
         </div>
 
         {{-- Контент страницы --}}
