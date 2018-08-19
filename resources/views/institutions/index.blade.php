@@ -14,7 +14,7 @@
                 <div class="lg:bg-white lg:shadow-lg about-lg:mx-20">
                     {{-- Реклама: топ вузы текущего года для маленьких экранов --}}
                     <div class="mb-8 px-3 lg:px-6 lg:hidden">
-                        <institution-promo-carousel heading="{{ ($institutionType == 'universities' ? 'Топ вузы' : 'Топ колледжи') . ' ' . \Carbon\Carbon::now()->year }}"></institution-promo-carousel>
+                        @include ('institutions.partials.promo-carousel')
                     </div>
 
                     {{-- Подзаголовок страницы --}}
@@ -96,7 +96,7 @@
                         {{-- Реклама: топ вузы текущего года для больших экранов --}}
                         <div class="hidden lg:block lg:w-1/3">
                             <div class="sticky" style="top: 90px">
-                                <institution-promo-carousel heading="{{ ($institutionType == 'universities' ? 'Топ вузы' : 'Топ колледжи') . ' ' . \Carbon\Carbon::now()->year }}"></institution-promo-carousel>
+                                @include ('institutions.partials.promo-carousel')
                             </div>
                         </div>
                     </div>

@@ -13,41 +13,21 @@
 
         <!-- Рекламные блоки -->
         <div class="institution-promo-carousel border border-blue-dark">
-            <div class="carousel-cell md:w-full">
-                <div class="flex pb-3 pt-5 px-5 items-center justify-center lg:flex-col lg:py-16">
+            <div v-for="institution in institutions" class="carousel-cell md:w-full">
+                <div class="flex pb-3 pt-5 px-5 items-center justify-center lg:flex-col lg:pt-16 lg:pb-10">
                     <div class="mr-4 md:mr-5 lg:mr-0 lg:mb-10">
-                        <a href="#" class="block">
-                            <img src="http://mustim09.beget.tech/storage/389/8cca0jpg.jpeg" alt="" class="block w-24 lg:w-32">
+                        <a :href="institution.link" class="block">
+                            <img :src="institution.logo" :alt="institution.name" class="block w-24 lg:w-32">
                         </a>
                     </div>
 
                     <div>
                         <div class="text-center mb-2">
-                            <a href="#" class="text-blue-dark no-underline md:text-xl lg:text-lg">Академический инновационный университет</a>
+                            <a :href="institution.link" class="text-blue-dark no-underline md:text-xl lg:text-lg">{{ institution.name }}</a>
                         </div>
 
                         <div class="text-sm text-center text-grey-dark md:text-base lg:hidden">
-                            Город: Семей
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-cell md:w-full">
-                <div class="flex pb-3 pt-5 px-5 items-center justify-center lg:flex-col lg:py-16">
-                    <div class="mr-4 md:mr-5 lg:mr-0 lg:mb-10">
-                        <a href="#" class="block">
-                            <img src="http://mustim09.beget.tech/storage/381/ksu-logogif.gif" alt="" class="block w-24 lg:w-32">
-                        </a>
-                    </div>
-
-                    <div>
-                        <div class="text-center mb-2">
-                            <a href="#" class="text-blue-dark no-underline md:text-xl lg:text-lg">Карагандинский государственный университет имени академика Е. А. Букетова</a>
-                        </div>
-
-                        <div class="text-sm text-center text-grey-dark md:text-base lg:hidden">
-                            Город: Семей
+                            Город: {{ institution.city }}
                         </div>
                     </div>
                 </div>
@@ -61,12 +41,7 @@
     import 'flickity/dist/flickity.min.css'
 
     export default {
-        props: {
-            heading: {
-                type: String,
-                required: true
-            }
-        },
+        props: [ 'heading', 'institutions' ],
 
         mounted() {
             let carousels = document.querySelectorAll('.institution-promo-carousel')
