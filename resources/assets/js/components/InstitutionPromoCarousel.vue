@@ -23,7 +23,7 @@
 
                     <div>
                         <div class="text-center mb-2">
-                            <a :href="institution.link" class="text-blue-dark no-underline md:text-xl lg:text-lg">{{ institution.name }}</a>
+                            <a :href="institution.link" class="text-blue-dark no-underline hover:underline md:text-xl lg:text-lg">{{ institution.name }}</a>
                         </div>
 
                         <div class="text-sm text-center text-grey-dark md:text-base lg:hidden">

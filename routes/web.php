@@ -18,8 +18,9 @@ Route::group(['prefix' => '/institutions/{institutionType}'], function() {
     Route::get('/search', 'InstitutionsController@rtSearch');
 
     Route::get('', 'InstitutionsController@index')->name('institutions.index');
-    Route::get('/{institution}', 'InstitutionsController@show')->name('institutions.show');
+    Route::get('/infinite-scroll', 'InstitutionsController@infiniteScroll');
 
+    Route::get('/{institution}', 'InstitutionsController@show')->name('institutions.show');
 });
 
 /**

@@ -26,7 +26,8 @@ class InstitutionsController extends Controller
         $institutions = InstitutionSearch::applyFilters($request)
             ->orderBy('title')
             ->with(['city', 'media'])
-            ->paginate(15);
+            ->limit(15)
+            ->get();
 
         $cities = City::all()->sortBy('title');
 
@@ -82,5 +83,15 @@ class InstitutionsController extends Controller
         });
 
         return response()->json(['results' => $institutions], 200);
+    }
+
+    public function infiniteScroll(Request $request)
+    {
+        return InstitutionSearch::applyFilters($request)
+            ->orderBy('title')
+            ->with(['city', 'media'])
+            ->offset($request->offset)
+            ->limit(15)
+            ->get();
     }
 }
