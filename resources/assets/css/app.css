@@ -97,6 +97,11 @@ button:focus {
     @apply text-grey-dark;
 }
 
+@responsive {
+    .flex-2 { flex: 2; }
+    .flex-3 { flex: 3; }
+}
+
 /*
  * Внешний отступ контейнера для того чтобы кнопка наверх оставалась за контейнером
  */
