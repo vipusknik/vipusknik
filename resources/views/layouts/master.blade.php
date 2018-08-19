@@ -20,6 +20,14 @@
 
     <div id="app" v-cloak>
         @yield ('content')
+
+        {{-- Кнопка наверх --}}
+        <jump-up-button :always-visible="true" class="hidden lg:flex lg:flex-col lg:items-center lg:pin-l lg:pin-b lg:ml-10 lg:mb-10 cursor-pointer">
+            <button class="w-8 h-8 rounded-sm bg-orange mb-2">
+                <svg class="w-4 h-4 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 3L0 13h16z"/></svg>
+            </button>
+            <div class="text-orange">Наверх</div>
+        </jump-up-button>
     </div>
 
     <script src="{{ mix('js/app.js') }}"></script>

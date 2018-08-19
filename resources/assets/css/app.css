@@ -96,3 +96,13 @@ button:focus {
 .placeholder-text-grey-dark::placeholder {
     @apply text-grey-dark;
 }
+
+/*
+ * Внешний отступ контейнера для того чтобы кнопка наверх оставалась за контейнером
+ */
+@media (min-width: 992px) and (max-width: 1400px) {
+    .about-lg\:mx-20 {
+        margin-right: 5rem;
+        margin-left: 5rem;
+    }
+}
