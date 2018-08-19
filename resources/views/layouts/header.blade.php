@@ -1,5 +1,5 @@
 {{-- Шапка для маленьких и средних экранов --}}
-<div class="flex mb-16 md:hidden">
+<div class="flex md:mb-24 lg:hidden" style="margin-bottom: 80px">
     <header class="fixed z-10 w-full bg-blue-darker">
         {{-- Зафиксированная навигация --}}
         <div class="container mx-auto">
@@ -28,7 +28,7 @@
                 <div @click.self="showNavMenu = false" class="absolute z-20 w-full h-full bg-transparent-40"></div>
 
                 {{-- меню --}}
-                <menu class="absolute z-20 w-64 h-full bg-blue-dark m-0 p-0 md:p-3 md:w-1/2">
+                <menu class="absolute z-20 w-64 h-full bg-blue-dark m-0 p-0 lg:p-3 lg:w-1/2">
                     <a href="/institutions/universities" class="block no-underline px-6 py-2 hover:bg-blue-darker">
                         <div class="flex items-center text-white">
                             <div class="w-12 flex-no-shrink mr-3">
@@ -121,32 +121,34 @@
 </div>
 
 {{--Шапка для больших экранов --}}
-<div class="hidden md:flex mb-16">
+<div class="hidden lg:flex mb-16">
     <div class="fixed z-10 w-full bg-blue-darker font-sans">
         <div class="container mx-auto">
-            <header class="flex">
-                <div class="w-1/4 py-3 px-6">
-                    <a href="#">
-                        <img src="{{ asset('/img/vipusknik_logo.png') }}" alt="vipusknik.kz" class="h-6 w-auto lg:h-8">
-                    </a>
-                </div>
-                <div class="w-1/2">
-                    <div class="flex h-full">
-                        <a href="#" class="flex items-center px-6 text-lg text-white font-semibold no-underline hover:bg-blue-dark">
-                            Университеты
-                        </a>
-                        <a href="#" class="flex items-center px-6 text-lg text-white font-semibold no-underline hover:bg-blue-dark">
-                            Колледжи
-                        </a>
-                        <a href="#" class="flex items-center px-6 text-lg text-white font-semibold no-underline hover:bg-blue-dark">
-                            Специальности
-                        </a>
-                        <a href="#" class="flex items-center px-6 text-lg text-white font-semibold no-underline hover:bg-blue-dark">
-                            ЕНТ
+            <div class="about-lg:mx-20">
+                <header class="flex">
+                    <div class="w-1/4 py-3 px-6">
+                        <a href="#">
+                            <img src="{{ asset('/img/vipusknik_logo.png') }}" alt="vipusknik.kz" class="h-6 w-auto lg:h-8">
                         </a>
                     </div>
-                </div>
-            </header>
+                    <div class="w-1/2">
+                        <div class="flex h-full">
+                            <a href="/institutions/universities" class="flex items-center px-6 text-lg text-white font-semibold no-underline hover:bg-blue-dark">
+                                ВУЗы
+                            </a>
+                            <a href="/institutions/colleges" class="flex items-center px-6 text-lg text-white font-semibold no-underline hover:bg-blue-dark">
+                                Колледжи
+                            </a>
+                            <a href="#" class="flex items-center px-6 text-lg text-white font-semibold no-underline hover:bg-blue-dark">
+                                Специальности
+                            </a>
+                            <a href="#" class="flex items-center px-6 text-lg text-white font-semibold no-underline hover:bg-blue-dark">
+                                ЕНТ
+                            </a>
+                        </div>
+                    </div>
+                </header>
+            </div>
         </div>
     </div>
 </div>
