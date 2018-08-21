@@ -2834,7 +2834,13 @@ flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
 
-flickity@^2.1.2:
+flickity-fullscreen@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/flickity-fullscreen/-/flickity-fullscreen-1.1.0.tgz#5e9da403d3dc6fb47b2c77acd18da943f71bf9f8"
+  dependencies:
+    flickity "^2.1.0"
+
+flickity@^2.1.0, flickity@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/flickity/-/flickity-2.1.2.tgz#f1be68a75c8d8d8d6df68fb2a49f358268279bd0"
   dependencies:

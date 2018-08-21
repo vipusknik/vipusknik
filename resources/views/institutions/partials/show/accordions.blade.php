@@ -160,12 +160,20 @@
     </div>
 </one-open-accordion>
 
-<one-open-accordion name="gallery" heading-classes="bg-yellow">
-    <template slot="heading">
-        фотогалерея
-    </template>
+@if ($institution->is_paid && count($institution->media))
+    <one-open-accordion name="gallery" heading-classes="bg-yellow">
+        <template slot="heading">
+            фотогалерея
+        </template>
 
-    <div>
-        {{--  --}}
-    </div>
-</one-open-accordion>
+        <div class="mt-2">
+            <carousel>
+                @foreach ($institution->media as $image)
+                    @if ($image->collection_name != 'logo')
+                        <img src="{{ $image->getUrl() }}" class="carousel-cell md:rounded-tr-2xl md:rounded-bl-2xl" alt="{{ $image->file_name }} {{ $institution->title }}">
+                    @endif
+                @endforeach
+            </carousel>
+        </div>
+    </one-open-accordion>
+@endif
