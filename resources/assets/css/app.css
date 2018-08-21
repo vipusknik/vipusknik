@@ -93,6 +93,18 @@ button:focus {
     background: rgba(255, 255, 255, 0.4);
  }
 
+ .rotate-x-180 {
+    transform: rotateX(-180deg);
+ }
+
+ .transition-linear {
+    transition-function: linear;
+ }
+
+ .transition-fast {
+    transition-duration: .3s;
+ }
+
 .placeholder-text-grey-dark::placeholder {
     @apply text-grey-dark;
 }

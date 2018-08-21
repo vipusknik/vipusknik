@@ -75,7 +75,7 @@ let colors = {
   'yellow-darkest': '#453411',
   'yellow-darker': '#684f1d',
   'yellow-dark': '#f2d024',
-  'yellow': '#ffed4a',
+  'yellow': '#F8C301',
   'yellow-light': '#fff382',
   'yellow-lighter': '#fff9c2',
   'yellow-lightest': '#fcfbeb',
@@ -84,7 +84,7 @@ let colors = {
   'green-darker': '#1a4731',
   'green-dark': '#1f9d55',
   'green': '#38c172',
-  'green-light': '#51d88a',
+  'green-light': '#85C226',
   'green-lighter': '#a2f5bf',
   'green-lightest': '#e3fcec',
 
@@ -99,9 +99,9 @@ let colors = {
   'blue-darkest': '#12283a',
   'blue-darker': '#1D5671',
   'blue-dark': '#2F84A9',
-  'blue': '#3490dc',
+  'blue': '#76C5F0',
   'blue-light': '#2F84A9',
-  'blue-lighter': '#bcdefa',
+  'blue-lighter': '#76C5F0',
   'blue-lightest': '#eff8ff',
 
   'indigo-darkest': '#191e38',
@@ -784,6 +784,7 @@ module.exports = {
     '25': '.25',
     '50': '.5',
     '75': '.75',
+    '90': '.90',
     '100': '1',
   },
 

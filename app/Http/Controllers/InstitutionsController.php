@@ -54,12 +54,19 @@ class InstitutionsController extends Controller
         } else {
             $institution->load(['specialties' => function ($q) {
                 $q
+                    ->where('form', 'full-time')
                     ->orderBy('title')
                     ->orderBy('pivot_specialty_id');
             }]);
         }
 
-        return view('institutions.show', compact('institution'));
+        $cities = City::all()->sortBy('title');
+
+        $specialties = Specialty::of($institutionType)
+            ->orderBy('code')
+            ->get();
+
+        return view('institutions.show', compact('institution', 'cities', 'specialties'));
     }
 
     public function rtSearch(Request $request, $institutionType)

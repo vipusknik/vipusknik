@@ -68,7 +68,7 @@
                         </form>
                     </div>
 
-                    <div class="lg:flex">
+                    <div class="md:flex">
                         {{-- Список вузов --}}
                         <infinite-institution-list :offset-initial="{{ count($institutions) }}"
                                                     institution-type="{{ $institutionType }}"

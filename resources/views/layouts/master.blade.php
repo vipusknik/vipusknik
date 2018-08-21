@@ -10,6 +10,8 @@
     </title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+
+    @yield ('styles')
 </head>
 <body class="font-cuprum">
     <script>

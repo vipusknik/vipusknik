@@ -1,6 +1,6 @@
 {{-- Шапка для маленьких и средних экранов --}}
-<div class="flex md:mb-24 lg:hidden" style="margin-bottom: 80px">
-    <header class="fixed z-10 w-full bg-blue-darker">
+<div class="flex md:mb-24 lg:hidden" style="margin-bottom: 64px">
+    <header class="fixed z-20 w-full bg-blue-darker">
         {{-- Зафиксированная навигация --}}
         <div class="container mx-auto">
             <div class="flex justify-between items-center p-3">
@@ -122,7 +122,7 @@
 
 {{--Шапка для больших экранов --}}
 <div class="hidden lg:flex mb-16">
-    <div class="fixed z-10 w-full bg-blue-darker font-sans">
+    <div class="fixed z-20 w-full bg-blue-darker font-sans">
         <div class="container mx-auto">
             <div class="about-lg:mx-20">
                 <header class="flex">
