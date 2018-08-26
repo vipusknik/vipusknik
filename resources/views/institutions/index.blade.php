@@ -34,7 +34,8 @@
                             <input type="text" name="query" value="{{ request('query') }}" placeholder="Название учебного заведения..." class="block w-full px-6 py-2 mb-3 text-lg placeholder-text-grey-dark bg-white">
                             <div class="flex">
                                 <div class="w-3/5 mr-3">
-                                    <select class="block w-full text-grey py-2 px-4 styled-select" name="specialty">
+                                    <ss-select class="text-grey" name="specialty">
+                                        <input type="search" class="block w-full py-2 px-4 text-grey">
                                         <option value="" class="py-1 px-6">
                                             Специальности{{ $institutionType == 'colleges' ? ', квалификации' : '' }}
                                         </option>
@@ -43,19 +44,20 @@
                                                 {{ $specialty->title }} ({{ $specialty->code }})
                                             </option>
                                         @endforeach
-                                    </select>
+                                    </ss-select>
                                 </div>
 
                                 <div class="w-2/5 flex">
                                     <div class="w-4/5 mr-3">
-                                        <select class="block w-full text-grey py-2 px-4 styled-select" name="city">
-                                            <option value="">Город</option>
+                                        <ss-select class="text-grey" name="city">
+                                            <input type="search" class="block w-full py-2 px-4 text-grey">
+                                            <option value="" class="px-6 py-1">Город</option>
                                             @foreach ($cities as $city)
                                                 <option value="{{ $city->id }}" {{ request('city') == $city->id ? 'selected' : '' }} class="px-6 py-1">
                                                     {{ $city->title }}
                                                 </option>
                                             @endforeach
-                                        </select>
+                                        </ss-select>
                                     </div>
 
                                     <div class="w-1/5">
