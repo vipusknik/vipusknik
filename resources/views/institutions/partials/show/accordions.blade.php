@@ -35,7 +35,7 @@
 
 <one-open-accordion name="specialties" heading-classes="bg-blue-lighter">
     <template slot="heading">
-        специальности
+        бакалавриат
     </template>
 
     <div>
@@ -48,17 +48,13 @@
                     </div>
 
                     <div class="flex py-2">
-                        <div class="w-1/3 px-2 border-r border-black flex flex-col items-center">
+                        <div class="w-1/2 px-2 border-r border-black flex flex-col items-center">
                             <div class="text-sm text-grey-darker">Стоимость за 1 год</div>
                             <div>{{ $specialty->pivot->study_price }}</div>
                         </div>
-                        <div class="w-1/3 px-2 border-r border-black flex flex-col items-center">
+                        <div class="w-1/2 px-2 flex flex-col items-center">
                             <div class="text-sm text-grey-darker">Срок обучения</div>
                             <div>{{ $specialty->pivot->study_period }}</div>
-                        </div>
-                        <div class="w-1/3 px-2 flex flex-col items-center">
-                            <div class="text-sm text-grey-darker">Форма обучения</div>
-                            <div>Очно</div>
                         </div>
                     </div>
                 </div>
@@ -119,46 +115,48 @@
     </div>
 </one-open-accordion>
 
-<one-open-accordion name="reception-comittee" heading-classes="bg-green-light">
-    <template slot="heading">
-        приемная комиссия
-    </template>
+@if ($institution->reception)
+    <one-open-accordion name="reception-comittee" heading-classes="bg-green-light">
+        <template slot="heading">
+            приемная комиссия
+        </template>
 
-    <div>
-        {{-- Контакты --}}
-        <div class="px-6 py-3">
-            <div class="flex items-center mb-3">
-                <div class="flex-none mr-2">
-                    <svg class="inline-block w-4 h-4 fill-current text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 20S3 10.87 3 7a7 7 0 1 1 14 0c0 3.87-7 13-7 13zm0-11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+        <div>
+            {{-- Контакты --}}
+            <div class="px-6 py-3">
+                <div class="flex items-center mb-3">
+                    <div class="flex-none mr-2">
+                        <svg class="inline-block w-4 h-4 fill-current text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 20S3 10.87 3 7a7 7 0 1 1 14 0c0 3.87-7 13-7 13zm0-11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+                    </div>
+                    {{ $institution->reception->address }}
                 </div>
-                {{ $institution->reception->address }}
+
+                <div class="flex items-center mb-3">
+                    <div class="flex-none mr-2">
+                        <svg class="inline-block w-4 h-4 fill-current text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M20 18.35V19a1 1 0 0 1-1 1h-2A17 17 0 0 1 0 3V1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4c0 .56-.31 1.31-.7 1.7L3.16 8.84c1.52 3.6 4.4 6.48 8 8l2.12-2.12c.4-.4 1.15-.71 1.7-.71H19a1 1 0 0 1 .99 1v3.35z"/></svg>
+                    </div>
+                    <a href="tel:{{ $institution->reception->phone }}" class="text-green-light">{{ $institution->reception->phone }}</a>
+                </div>
+
+                <div class="flex">
+                    <div class="flex-none mr-2">
+                        <svg class="inline-block w-4 h-4 fill-current text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M13.6 13.47A4.99 4.99 0 0 1 5 10a5 5 0 0 1 8-4V5h2v6.5a1.5 1.5 0 0 0 3 0V10a8 8 0 1 0-4.42 7.16l.9 1.79A10 10 0 1 1 20 10h-.18.17v1.5a3.5 3.5 0 0 1-6.4 1.97zM10 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>
+                    </div>
+                    <a href="mailto:{{ $institution->reception->email }}" class="text-green-light">{{ $institution->reception->email }}</a>
+                </div>
             </div>
 
-            <div class="flex items-center mb-3">
-                <div class="flex-none mr-2">
-                    <svg class="inline-block w-4 h-4 fill-current text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M20 18.35V19a1 1 0 0 1-1 1h-2A17 17 0 0 1 0 3V1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4c0 .56-.31 1.31-.7 1.7L3.16 8.84c1.52 3.6 4.4 6.48 8 8l2.12-2.12c.4-.4 1.15-.71 1.7-.71H19a1 1 0 0 1 .99 1v3.35z"/></svg>
+            {{-- Описание --}}
+            @if ($institution->reception->info)
+                <div class="p-3 text-grey-darkest">
+                    {!! $institution->reception->info !!}
                 </div>
-                <a href="tel:{{ $institution->reception->phone }}" class="text-green-light">{{ $institution->reception->phone }}</a>
-            </div>
-
-            <div class="flex">
-                <div class="flex-none mr-2">
-                    <svg class="inline-block w-4 h-4 fill-current text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                        <path d="M13.6 13.47A4.99 4.99 0 0 1 5 10a5 5 0 0 1 8-4V5h2v6.5a1.5 1.5 0 0 0 3 0V10a8 8 0 1 0-4.42 7.16l.9 1.79A10 10 0 1 1 20 10h-.18.17v1.5a3.5 3.5 0 0 1-6.4 1.97zM10 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                    </svg>
-                </div>
-                <a href="mailto:{{ $institution->reception->email }}" class="text-green-light">{{ $institution->reception->email }}</a>
-            </div>
+            @endif
         </div>
-
-        {{-- Описание --}}
-        @if ($institution->reception->info)
-            <div class="p-3 text-grey-darkest">
-                {!! $institution->reception->info !!}
-            </div>
-        @endif
-    </div>
-</one-open-accordion>
+    </one-open-accordion>
+@endif
 
 @if ($institution->is_paid && count($institution->media))
     <one-open-accordion name="gallery" heading-classes="bg-yellow">
