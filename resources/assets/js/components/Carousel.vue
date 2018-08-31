@@ -23,7 +23,7 @@
         mounted() {
             new Flickity('.main-carousel', {
                 autoPlay: this.autoPlay,
-                cellAlign: 'left',
+                cellAlign: 'center',
                 contain: true,
                 pageDots: false,
                 fullscreen: true
@@ -52,10 +52,10 @@
         justify-content: center;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
         .main-carousel .carousel-cell {
             height: 200px;
-            width: 100%;
+            width: 30%;
             object-fit: cover;
             object-position: center;
         }
