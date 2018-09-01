@@ -1,5 +1,5 @@
 {{-- Шапка для маленьких и средних экранов --}}
-<div class="flex md:mb-24 lg:hidden" style="margin-bottom: 64px">
+<div class="flex md:mb-24 lg:hidden" style="margin-bottom: 70px">
     <header class="fixed z-20 w-full bg-blue-darker">
         {{-- Зафиксированная навигация --}}
         <div class="container mx-auto">
@@ -9,7 +9,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="inline-block h-8 w-8 fill-current text-white"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
                     </button>
                 </div>
-                <a href="#" class="block">
+                <a href="/" class="block">
                     <img src="/img/vipusknik_logo.png" alt="vipusknik.kz" class="block h-8">
                 </a>
                 <div class="mt-1">
@@ -129,7 +129,7 @@
             <div class="about-lg:mx-20">
                 <header class="flex">
                     <div class="w-1/4 py-3 px-6">
-                        <a href="#">
+                        <a href="/">
                             <img src="{{ asset('/img/vipusknik_logo.png') }}" alt="vipusknik.kz" class="h-6 w-auto lg:h-8">
                         </a>
                     </div>
@@ -141,10 +141,10 @@
                             <a href="/institutions/colleges" class="flex items-center px-6 text-lg text-white font-semibold no-underline hover:bg-blue-dark">
                                 Колледжи
                             </a>
-                            <a href="#" class="flex items-center px-6 text-lg text-white font-semibold no-underline hover:bg-blue-dark">
+                            <a href="/specialties/directions" class="flex items-center px-6 text-lg text-white font-semibold no-underline hover:bg-blue-dark">
                                 Специальности
                             </a>
-                            <a href="#" class="flex items-center px-6 text-lg text-white font-semibold no-underline hover:bg-blue-dark">
+                            <a href="/ent" class="flex items-center px-6 text-lg text-white font-semibold no-underline hover:bg-blue-dark">
                                 ЕНТ
                             </a>
                         </div>
