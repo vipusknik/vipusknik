@@ -19,7 +19,7 @@
                             </div>
 
                             <div class="flex mb-4">
-                                <tabs>
+                                <tabs style="margin-top: -43px;">
                                     <tab name="{{ $institution->title }}" bg-class="bg-orange" :selected-initial="true">
                                         <div class="flex py-4 px-5">
                                             <div class="w-4/5 mr-2">

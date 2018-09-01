@@ -124,7 +124,7 @@
 
 {{--Шапка для больших экранов --}}
 <div class="hidden lg:flex mb-16">
-    <div class="fixed z-20 w-full bg-blue-darker font-sans">
+    <div class="fixed z-30 w-full bg-blue-darker font-sans">
         <div class="container mx-auto">
             <div class="about-lg:mx-20">
                 <header class="flex">

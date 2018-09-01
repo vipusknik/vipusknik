@@ -1,9 +1,12 @@
 <template>
     <div class="w-full">
         <!-- tab names -->
-        <div class="flex">
-            <div v-for="tab in tabs" @click="select(tab)" :class="tab.bgClass" class="text-white py-3 pl-5 pr-8 cursor-pointer select-none">
-                <a :href="tab.href" class="block text-white no-underline">{{ tab.name }}</a>
+        <div class="flex justify-end">
+            <div v-for="tab in tabs" @click="select(tab)" class="flex tab text-white cursor-pointer select-none">
+                <a :href="tab.href" class="block text-white no-underline py-3 pl-6 pr-5" :class="tab.bgClass + (tab.selected ? ' z-20': '')">
+                    {{ tab.name }}
+                </a>
+                <div class="triangle z-10" :class="'border-' + tab.bgClass.split('bg-')[1]"></div>
             </div>
         </div>
 
@@ -44,3 +47,15 @@
         }
     }
 </script>
+
+<style scoped>
+    .tab:not(:first-child) {
+        margin-left: -6px;
+    }
+
+    .triangle {
+        border-bottom-width: 42px;
+        border-bottom-style: solid;
+        border-right: 18px solid transparent;
+    }
+</style>
