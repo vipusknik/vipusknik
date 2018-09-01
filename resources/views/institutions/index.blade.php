@@ -13,7 +13,7 @@
             <main class="container mx-auto">
                 <div class="lg:bg-white lg:shadow-lg about-lg:mx-20">
                     {{-- Реклама: топ вузы текущего года для маленьких экранов --}}
-                    <div class="mb-8 px-3 lg:px-6 lg:hidden">
+                    <div class="mb-4 px-3 lg:px-6 lg:hidden">
                         @include ('institutions.partials.promo-carousel')
                     </div>
 

@@ -50,6 +50,8 @@
                                             </div>
                                         </div>
 
+                                        @include('institutions.partials.dormitory-and-military-dep')
+
                                         <carousel>
                                             @foreach ($institution->media as $image)
                                                 @if ($image->collection_name != 'logo')

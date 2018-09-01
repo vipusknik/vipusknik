@@ -30,6 +30,8 @@
         <div class="p-3 text-grey-darkest">
             {!! $institution->description !!}
         </div>
+
+        @include('institutions.partials.dormitory-and-military-dep')
     </div>
 </one-open-accordion>
 
