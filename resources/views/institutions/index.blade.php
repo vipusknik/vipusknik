@@ -12,7 +12,7 @@
                 <div class="lg:bg-white lg:shadow-lg about-lg:mx-20" style="min-height: 700px">
                     {{-- Реклама: топ вузы текущего года для маленьких экранов --}}
                     <div class="mb-4 px-3 lg:px-6 lg:hidden">
-                        @include ('institutions.partials.promo-carousel')
+                        @include ('institutions.partials.promo-carousel', [ 'pageDots' => false ])
                     </div>
 
                     {{-- Подзаголовок страницы --}}
@@ -118,7 +118,7 @@
                         {{-- Реклама: топ вузы текущего года для больших экранов --}}
                         <div class="hidden lg:block lg:w-1/3">
                             <div class="sticky" style="top: 90px">
-                                @include ('institutions.partials.promo-carousel')
+                                @include ('institutions.partials.promo-carousel', [ 'pageDots' => true ])
                             </div>
                         </div>
                     </div>

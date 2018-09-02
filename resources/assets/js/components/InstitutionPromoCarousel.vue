@@ -12,7 +12,7 @@
         </div>
 
         <!-- Рекламные блоки -->
-        <div class="institution-promo-carousel border border-blue-dark">
+        <div ref="carousel" class="institution-promo-carousel border border-blue-dark">
             <div v-for="institution in institutions" class="carousel-cell md:w-full">
                 <div class="flex pb-3 pt-5 px-5 items-center justify-center lg:flex-col lg:pt-16 lg:pb-10">
                     <div class="mr-4 md:mr-5 lg:mr-0 lg:mb-10">
@@ -41,21 +41,25 @@
     import 'flickity/dist/flickity.min.css'
 
     export default {
-        props: [ 'heading', 'institutions' ],
+        props: {
+            heading: {},
+            institutions: {},
+            pageDots: {
+                type: Boolean,
+                required: false,
+                default: false
+            }
+        },
 
         mounted() {
-            let carousels = document.querySelectorAll('.institution-promo-carousel')
-
-            for (let i = 0; i < carousels.length; i++) {
-                new Flickity(carousels[i], {
-                    autoPlay: true,
-                    wrapAround: true,
-                    cellAlign: 'left',
-                    contain: true,
-                    pageDots: i != 0, // первая карусель для маленьких экранов и ей не нужны кнопки
-                    prevNextButtons: false,
-                })
-            }
+            new Flickity(this.$refs['carousel'], {
+                autoPlay: true,
+                wrapAround: true,
+                cellAlign: 'left',
+                contain: true,
+                pageDots: this.pageDots,
+                prevNextButtons: false,
+            })
         }
     }
 </script>
