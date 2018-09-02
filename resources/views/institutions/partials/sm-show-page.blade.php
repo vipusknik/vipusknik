@@ -1,6 +1,6 @@
 <one-open-accordion name="institution" :is-open-initial="true" heading-classes="bg-orange">
     <template slot="heading">
-        @if ($institution->hasLogo())
+        @if ($institution->hasLogo() && $institution->is_paid)
             <div class="mr-2 flex-none">
                 <img src="{{ $institution->logo()->getUrl() }}" alt="{{ $institution->title }}" class="block w-10 h-10">
             </div>
@@ -29,6 +29,10 @@
 
         <div class="p-3 text-grey-darkest">
             {!! $institution->description !!}
+
+            @if ($institution->is_paid && $institution->extra_description)
+                {!! $institution->extra_description !!}
+            @endif
         </div>
 
         @include('institutions.partials.dormitory-and-military-dep')
@@ -53,11 +57,11 @@
                         <div class="flex py-2">
                             <div class="w-1/2 px-2 border-r border-black flex flex-col items-center">
                                 <div class="text-sm text-grey-darker">Стоимость за 1 год</div>
-                                <div>{{ $specialty->pivot->study_price }}</div>
+                                <div>{{ $specialty->pivot->study_price ?: '--' }}</div>
                             </div>
                             <div class="w-1/2 px-2 flex flex-col items-center">
                                 <div class="text-sm text-grey-darker">Срок обучения</div>
-                                <div>{{ $specialty->pivot->study_period }}</div>
+                                <div>{{ $specialty->pivot->study_period ?: '--' }}</div>
                             </div>
                         </div>
                     </div>

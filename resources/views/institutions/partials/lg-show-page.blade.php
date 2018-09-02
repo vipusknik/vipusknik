@@ -17,7 +17,7 @@
                         </div>
 
                         <div class="w-1/5 flex flex-col items-center">
-                            @if ($institution->hasLogo())
+                            @if ($institution->hasLogo() && $institution->is_paid)
                                 <div class="mb-3">
                                     <img src="{{ $institution->logo()->getUrl() }}" alt="{{ $institution->title }} лого" class="block w-32">
                                 </div>
@@ -38,8 +38,9 @@
 
                     @include('institutions.partials.dormitory-and-military-dep')
 
-                    <div class="py-3 mb-3">
-                        <carousel>
+                    @if ($institution->is_paid)
+                    <div class="py-3 mb-6">
+                        <carousel :page-dots="true">
                             @foreach ($institution->media as $image)
                                 @if ($image->collection_name != 'logo')
                                     <img src="{{ $image->getUrl() }}" class="carousel-cell md:rounded-tr-2xl md:rounded-bl-2xl shadow-lg p-2" alt="{{ $image->file_name }} {{ $institution->title }}">
@@ -47,6 +48,11 @@
                             @endforeach
                         </carousel>
                     </div>
+                    @endif
+
+                    @if ($institution->is_paid && $institution->extra_description)
+                        <div class="py-4 px-5 text-grey-darkest">{!! $institution->extra_description !!}</div>
+                    @endif
                 </tab>
 
                 <tab name="{{ $isUniversity ? 'бакалавриат' : 'специальности' }}" bg-class="bg-blue">
@@ -95,7 +101,7 @@
                                             <div class="border-r border-l border-grey-dark">{{ $specialty->code }}</div>
                                         </td>
                                         <td class="py-3 text-center">
-                                            <div class="border-r border-grey-dark">{{ $specialty->pivot->study_price ?: '--' }} тг</div>
+                                            <div class="border-r border-grey-dark">{{ $specialty->pivot->study_price ? $specialty->pivot->study_price . ' тг': '--' }}</div>
                                         </td>
                                         <td class="py-3 text-center">
                                             <div>{{ $specialty->pivot->study_period ?: '--' }}</div>
@@ -129,7 +135,7 @@
                                                     <div class="py-3 border-r border-l border-brown-light">{{ $qualification->code }}</div>
                                                 </td>
                                                 <td class="text-center">
-                                                    <div class="py-3 border-r border-brown-light">{{ $qualification->pivot->study_price ?: '--' }} тг</div>
+                                                    <div class="py-3 border-r border-brown-light">{{ $qualification->pivot->study_price ? $qualification->pivot->study_price . ' тг' : '--' }}</div>
                                                 </td>
                                                 <td class="text-center">
                                                     <div class="py-3">{{ $qualification->pivot->study_period ?: '--' }}</div>

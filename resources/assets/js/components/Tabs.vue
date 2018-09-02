@@ -1,17 +1,19 @@
 <template>
     <div class="w-full">
-        <!-- tab names -->
-        <div class="flex justify-end">
-            <div v-for="tab in tabs" @click="select(tab)" class="flex tab text-white cursor-pointer select-none">
-                <a :href="tab.href" class="block text-white no-underline py-3 pl-6 pr-5" :class="tab.bgClass + (tab.selected ? ' z-20': '')">
-                    {{ tab.name }}
-                </a>
-                <div class="triangle z-10" :class="'border-' + tab.bgClass.split('bg-')[1]"></div>
+        <div class="flex flex-col">
+            <!-- tab names -->
+            <div class="flex justify-end">
+                <div v-for="tab in tabs" @click="select(tab)" class="flex tab text-white cursor-pointer select-none">
+                    <div class="block text-white py-3 pl-6 pr-5" :class="tab.bgClass + (tab.selected ? ' z-20': '')">
+                        {{ tab.name }}
+                    </div>
+                    <div class="triangle z-10" :class="'border-' + tab.bgClass.split('bg-')[1]"></div>
+                </div>
             </div>
-        </div>
 
-        <!-- decoration line -->
-        <div class="h-2 w-full" :class="selectedTab ? selectedTab.bgClass : ''"></div>
+            <!-- decoration line -->
+            <div class="h-2 w-full" :class="selectedTab ? selectedTab.bgClass : ''"></div>
+        </div>
 
         <!-- tab content -->
         <div>
@@ -41,7 +43,7 @@
         methods: {
             select(selectedTab) {
                 this.tabs.forEach(tab => {
-                    tab.selected = (tab.href == selectedTab.href)
+                    tab.selected = (tab.name == selectedTab.name)
                 })
             }
         }

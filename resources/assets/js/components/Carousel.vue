@@ -15,7 +15,8 @@
     export default {
         props: {
             wrapAround: { default: true },
-            autoPlay: { default: false }
+            autoPlay: { default: false },
+            pageDots: { default: false }
         },
 
         mounted() {
@@ -23,7 +24,7 @@
                 autoPlay: this.autoPlay,
                 cellAlign: 'center',
                 contain: true,
-                pageDots: false,
+                pageDots: this.pageDots,
                 fullscreen: true
             })
 
@@ -37,9 +38,14 @@
 
 <style>
     .main-carousel .flickity-prev-next-button {
-        color: white !important;
+        color: #3d4852 !important;
         background: none !important;
-        top: 85%;
+    }
+
+    .flickity-page-dots .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 25%;
     }
 
     .main-carousel .flickity-button-icon {
