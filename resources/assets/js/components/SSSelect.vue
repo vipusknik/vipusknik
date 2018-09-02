@@ -4,6 +4,8 @@
             <slot></slot>
         </select>
 
+        <input type="text" class="hidden" :name="name" :value="selectedOption ? selectedOption.value : ''">
+
         <div class="relative">
             <input type="text"
                    v-model="query"
