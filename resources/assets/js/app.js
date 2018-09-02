@@ -23,7 +23,37 @@ new Vue({
     data() {
         return {
             showNavMenu: false,
-            showSearchMenu: false
+            showSearchMenu: false,
+
+            feedback: {
+                sender_name: '',
+                sender_mail_or_phone: '',
+                body: ''
+            },
+
+            sendingFeedback: false
+        }
+    },
+
+    methods: {
+        onFeedbackSubmit() {
+            this.sendingFeedback = true
+            axios.post('/feedback', this.feedback)
+              .then(response => {
+                    this.sendingFeedback = false
+                    this.$modal.hide('feedback-modal')
+
+                    if (response.data.status == 'ok') {
+                        return alert('Ваше сообщение отправлено!')
+                    }
+
+                    return alert('Ошибка. Сообщение не отправлено!')
+              })
+              .catch(() => {
+                  this.sendingFeedback = false
+                  this.$modal.hide('feedback-modal')
+                  alert('Ошибка при обработке данных!')
+              })
         }
     }
 })

@@ -36,21 +36,27 @@
                     <div>форму внизу</div>
                 </div>
 
-                <div class="w-full mb-6 px-10">
-                   <div class="mb-4">
-                        <input type="text" placeholder="Ваше имя" class="block w-full rounded-sm p-3 text-grey-dark">
+                <form @submit.prevent="onFeedbackSubmit" class="w-full">
+                    <div class="w-full mb-6 px-10">
+                       <div class="mb-4">
+                            <input type="text" v-model="feedback.sender_name" placeholder="Ваше имя" required class="block w-full rounded-sm p-3 text-grey-dark">
+                        </div>
+                       <div class="mb-4">
+                            <input type="text" v-model="feedback.sender_mail_or_phone" placeholder="Email или номер телефона" required class="block w-full rounded-sm p-3 text-grey-dark">
+                        </div>
+                        <div>
+                            <textarea v-model="feedback.body" placeholder="Опишите цель запроса" required class="block w-full h-48 rounded-sm p-3 text-grey-dark"></textarea>
+                        </div>
                     </div>
-                   <div class="mb-4">
-                        <input type="text" placeholder="Email или номер телефона" class="block w-full rounded-sm p-3 text-grey-dark">
-                    </div>
-                    <div>
-                        <textarea class="block w-full h-48 rounded-sm p-3 text-grey-dark" placeholder="Опишите цель запроса"></textarea>
-                    </div>
-                </div>
 
-                <div>
-                    <button type="button" class="block rounded-sm text-lg tracking-wide leading-none px-12 py-3 uppercase bg-orange hover:bg-green text-white">Отправить</button>
-                </div>
+                    <div class="text-center">
+                        <button type="submit"
+                                v-text="sendingFeedback ? 'Отправка' : 'Отправить'"
+                               :disabled="sendingFeedback"
+                               class="rounded-sm text-lg tracking-wide leading-none px-12 py-3 uppercase bg-orange hover:bg-green text-white">
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </modal>
