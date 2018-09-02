@@ -129,3 +129,7 @@ button:focus {
         margin-left: 5rem;
     }
 }
+
+.v--modal {
+    border-radius: 0 !important;
+}

@@ -1,7 +1,9 @@
 import 'babel-polyfill'
 import './bootstrap'
+import VModal from 'vue-js-modal'
 
 window.Vue = require('vue')
+Vue.use(VModal)
 
 Vue.component('institution-promo-carousel', require('./components/InstitutionPromoCarousel.vue'))
 Vue.component('ss-select', require('./components/SSSelect.vue'))

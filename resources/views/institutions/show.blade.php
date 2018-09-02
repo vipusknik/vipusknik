@@ -8,7 +8,7 @@
         $isCollege = !$isUniversity;
     @endphp
 
-    <div class="min-h-screen mb-2 flex flex-col">
+    <div class="min-h-screen flex flex-col">
         @include ('layouts.header')
 
         {{-- Контент страницы --}}
