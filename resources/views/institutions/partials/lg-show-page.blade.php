@@ -32,19 +32,21 @@
                                 </div>
                             @endif
 
-                            <a href="{{ $institution->web_site_url }}" class="block text-xl text-blue-dark mt-2 no-underline hover:underline">{{ $institution->web_site_url }}</a>
+                            <a href="{{ $institution->web_site_url }}" target="_blank" class="block text-xl text-blue-dark mt-2 no-underline hover:underline">{{ $institution->web_site_url }}</a>
                         </div>
                     </div>
 
                     @include('institutions.partials.dormitory-and-military-dep')
 
-                    <carousel>
-                        @foreach ($institution->media as $image)
-                            @if ($image->collection_name != 'logo')
-                                <img src="{{ $image->getUrl() }}" class="carousel-cell md:rounded-tr-2xl md:rounded-bl-2xl shadow" alt="{{ $image->file_name }} {{ $institution->title }}">
-                            @endif
-                        @endforeach
-                    </carousel>
+                    <div class="py-3 mb-3">
+                        <carousel>
+                            @foreach ($institution->media as $image)
+                                @if ($image->collection_name != 'logo')
+                                    <img src="{{ $image->getUrl() }}" class="carousel-cell md:rounded-tr-2xl md:rounded-bl-2xl shadow-lg p-2" alt="{{ $image->file_name }} {{ $institution->title }}">
+                                @endif
+                            @endforeach
+                        </carousel>
+                    </div>
                 </tab>
 
                 <tab name="{{ $isUniversity ? 'бакалавриат' : 'специальности' }}" bg-class="bg-blue">

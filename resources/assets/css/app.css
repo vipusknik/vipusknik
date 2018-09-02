@@ -112,6 +112,12 @@ button:focus {
 @responsive {
     .flex-2 { flex: 2; }
     .flex-3 { flex: 3; }
+
+    .order-1 { order: 1; }
+    .order-2 { order: 2; }
+    .order-3 { order: 3; }
+    .order-4 { order: 4; }
+    .order-5 { order: 5; }
 }
 
 /*

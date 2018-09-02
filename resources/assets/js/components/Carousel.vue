@@ -1,18 +1,16 @@
 <template>
     <div>
-        <div class="main-carousel">
-            <slot>
-                <!-- <img src="/images/defaults/beach.jpg" class="carousel-cell md:rounded-tr-2xl md:rounded-bl-2xl" alt="Дом отдыха"> -->
-            </slot>
+        <div ref="carousel" class="main-carousel">
+            <slot></slot>
         </div>
     </div>
 </template>
 
 <script>
-    import Flickity from 'flickity';
-    import 'flickity-fullscreen';
-    import 'flickity/dist/flickity.min.css';
-    import 'flickity-fullscreen/fullscreen.css';
+    import Flickity from 'flickity'
+    import 'flickity-fullscreen'
+    import 'flickity/dist/flickity.min.css'
+    import 'flickity-fullscreen/fullscreen.css'
 
     export default {
         props: {
@@ -21,12 +19,17 @@
         },
 
         mounted() {
-            new Flickity('.main-carousel', {
+            let carousel = new Flickity(this.$refs['carousel'], {
                 autoPlay: this.autoPlay,
                 cellAlign: 'center',
                 contain: true,
                 pageDots: false,
                 fullscreen: true
+            })
+
+            carousel.on('staticClick', (event, pointer, cellElement, cellIndex) => {
+                carousel.select(cellIndex)
+                carousel.viewFullscreen()
             })
         }
     }
@@ -52,7 +55,7 @@
         justify-content: center;
     }
 
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
         .main-carousel .carousel-cell {
             height: 200px;
             width: 30%;
@@ -77,5 +80,11 @@
     .carousel-nav img {
         width: 100px;
         height: 70px;
+    }
+
+    @media (min-width: 768px) {
+        .flickity-fullscreen-button {
+            display: none;
+        }
     }
 </style>

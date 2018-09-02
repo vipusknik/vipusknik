@@ -53,7 +53,7 @@
                     cellAlign: 'left',
                     contain: true,
                     pageDots: i != 0, // первая карусель для маленьких экранов и ей не нужны кнопки
-                    prevNextButtons: false
+                    prevNextButtons: false,
                 })
             }
         }
