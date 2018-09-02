@@ -12,7 +12,7 @@
              @keydown.up="up"
              @keydown.enter="hit"
              @keydown.esc="reset"
-             @blurя="reset"
+             @blur="reset"
              @input="update"
              :class="inputClasses"
              :style="inputStyles">

@@ -9,7 +9,7 @@
         {{-- Контент страницы --}}
         <div class="flex-1 mt-2 lg:bg-grey-light lg:mt-0">
             <main class="container mx-auto">
-                <div class="lg:bg-white lg:shadow-lg about-lg:mx-20">
+                <div class="lg:bg-white lg:shadow-lg about-lg:mx-20" style="min-height: 700px">
                     {{-- Реклама: топ вузы текущего года для маленьких экранов --}}
                     <div class="mb-4 px-3 lg:px-6 lg:hidden">
                         @include ('institutions.partials.promo-carousel')

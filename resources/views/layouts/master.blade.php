@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/img/vipusknik_32x32.ico">
+    <meta name="keywords" content="Выпускник, Vipusknik, абитуриент, колледж, вуз, университет, Казахстан">
+    <meta name="description" content="Выпускник - информационно-обучающий портал для абитуриентов Казахстана.
+        У нас Вы сможете посмотреть информацию о всех высших и средне-специальных учебных заведениях страны, узнать о
+        специальностях и профессиях, подготовится к ЕНТ, быть в курсе новостей мира образования и много другое.">
     {{-- <link rel="icon" type="image/png" href="/images/icons/walker.png"> --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>
