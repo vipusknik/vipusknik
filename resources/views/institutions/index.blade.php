@@ -1,8 +1,6 @@
 @extends ('layouts.master')
 
-@section ('title')
-    {{ translate($institutionType, 'i', 'p', true) }}
-@endsection
+@section ('title', translate($institutionType, 'i', 'p', true))
 
 @section('content')
     <div class="min-h-screen flex flex-col">

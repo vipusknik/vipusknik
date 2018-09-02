@@ -1,141 +1,25 @@
 @extends ('layouts.master')
 
-@section ('title')
-    {{ $institution->title }}
-@endsection
+@section ('title', $institution->title)
 
 @section('content')
+    @php
+        $isUniversity = $institution->type == 'university';
+        $isCollege = !$isUniversity;
+    @endphp
+
     <div class="min-h-screen mb-2 flex flex-col">
         @include ('layouts.header')
 
         {{-- Контент страницы --}}
-        <div class="flex-1 mt-1 lg:bg-grey-light">
+        <div class="flex-1 mt-1 lg:bg-grey-light lg:mt-0">
             <main>
-                <div class="hidden lg:block container mx-auto">
-                    <div class="lg:bg-white lg:shadow-lg about-lg:mx-20">
-                        <div>
-                            <div>
-                                <img src="/img/institutions/default-profile-photo.jpg" alt="{{ $institution->title }}" class="block w-full">
-                            </div>
-
-                            <div class="flex mb-4">
-                                <tabs style="margin-top: -43px;">
-                                    <tab name="{{ $institution->title }}" bg-class="bg-orange" :selected-initial="true">
-                                        <div class="flex py-4 px-5">
-                                            <div class="w-4/5 mr-2">
-                                                <h1 class="text-2xl text-blue-dark tracking-wide mb-1">{{ $institution->title }}</h1>
-
-                                                <div class="text-grey-darkest">
-                                                    {!! $institution->description !!}
-                                                </div>
-                                            </div>
-
-                                            <div class="w-1/5 flex flex-col items-center">
-                                                @if ($institution->hasLogo())
-                                                    <div class="mb-3">
-                                                        <img src="{{ $institution->logo()->getUrl() }}" alt="{{ $institution->title }} лого" class="block w-32">
-                                                    </div>
-                                                @endif
-
-                                                <div class="text-black">
-                                                    г. {{ $institution->city->title }}
-                                                </div>
-                                                @if ($institution->foundation_year)
-                                                    <div class="text-black">
-                                                        Основан в {{ $institution->foundation_year }} г.
-                                                    </div>
-                                                @endif
-
-                                                <a href="{{ $institution->web_site_url }}" class="block text-xl text-blue-dark mt-2 no-underline hover:underline">{{ $institution->web_site_url }}</a>
-                                            </div>
-                                        </div>
-
-                                        @include('institutions.partials.dormitory-and-military-dep')
-
-                                        <carousel>
-                                            @foreach ($institution->media as $image)
-                                                @if ($image->collection_name != 'logo')
-                                                    <img src="{{ $image->getUrl() }}" class="carousel-cell md:rounded-tr-2xl md:rounded-bl-2xl shadow" alt="{{ $image->file_name }} {{ $institution->title }}">
-                                                @endif
-                                            @endforeach
-                                        </carousel>
-                                    </tab>
-
-                                    <tab name="бакалавриат" bg-class="bg-blue">
-                                        <div class="px-8 py-2">
-                                            <p class="">Бакалавриат - форма трех или пятигодичного обучения студентов, дающая базовое высшее образование и степень бакалавра.</p>
-                                        </div>
-
-                                        <table class="w-full">
-                                            <thead class="mb-2">
-                                                <tr class="bg-blue-darker">
-                                                    <th class="py-3 px-4 text-white text-left font-normal">
-                                                        <div class="">Специальности Бакалавриата</div>
-                                                    </th>
-                                                    <th class="py-3 text-white font-normal">
-                                                        <div class="border-r border-l border-white">Код</div>
-                                                    </th>
-                                                    <th class="py-3 text-white font-normal">
-                                                        <div class="border-r border-white">Стоимость за год</div>
-                                                    </th>
-                                                    <th class="py-3 text-white font-normal">
-                                                        <div class="">Срок обучения</div>
-                                                    </th>
-                                                </tr>
-                                            </thead>
-
-                                            @if ($institution->type == 'university')
-                                                @include('institutions.partials.university-specialties')
-                                            @else
-                                                @include('institutions.partials.college-specialties')
-                                            @endif
-                                        </table>
-                                    </tab>
-
-                                    <tab name="контакты" bg-class="bg-blue-dark">
-                                        <div class="flex bg-blue-dark mt-3 px-6 py-2">
-                                            <div class="w-2/3 py-2">
-                                                <h3 class="text-white font-normal mb-4">
-                                                    Контакты {{ $institution->type == 'university' ? 'вуза' : 'колледжа' }}:
-                                                </h3>
-
-                                                @include('institutions.partials.contacts')
-                                            </div>
-
-                                            <div class="w-1/3">
-                                                {{-- Карта --}}
-                                                @if ($institution->map)
-                                                    <div class="py-3 px-10 mb-2">
-                                                        <div>
-                                                            {!! $institution->map->source_code !!}
-                                                        </div>
-                                                    </div>
-                                                @endif
-                                            </div>
-                                        </div>
-                                    </tab>
-
-                                    <tab name="приемная комиссия" bg-class="bg-green-light">
-                                        @if ($institution->reception)
-                                            <div class="bg-green-light mt-3 p-6">
-                                                @include('institutions.partials.reception-contacts')
-                                            </div>
-
-                                            @if ($institution->reception->info)
-                                                <div class="p-6 text-black">
-                                                    {!! $institution->reception->info !!}
-                                                </div>
-                                            @endif
-                                        @endif
-                                    </tab>
-                                </tabs>
-                            </div>
-                        </div>
-                    </div>
+                <div class="lg:hidden">
+                    @include ('institutions.partials.sm-show-page')
                 </div>
 
-                <div class="lg:hidden">
-                    @include ('institutions.partials.show.accordions')
+                <div class="hidden lg:block container mx-auto">
+                    @include ('institutions.partials.lg-show-page')
                 </div>
             </main>
         </div>
@@ -160,12 +44,16 @@
             background: #DEDEDC;
         }
 
-        .institution-specialty-table-body > tr:nth-child(odd) {
+        .university-specialty-table-body > tr:nth-child(odd) {
             background: #DEDEDC;
         }
 
-        .institution-specialty-table-body > tr:nth-child(even) > td:not(:last-child) > div {
+        .university-specialty-table-body > tr:nth-child(even) > td:not(:last-child) > div {
             border-color: transparent;
+        }
+
+        .college-qualification:not(:last-child) {
+            border-bottom: 1px solid grey;
         }
     </style>
 @endsection

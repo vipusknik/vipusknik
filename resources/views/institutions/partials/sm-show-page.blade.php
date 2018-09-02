@@ -37,30 +37,65 @@
 
 <one-open-accordion name="specialties" heading-classes="bg-blue-lighter">
     <template slot="heading">
-        бакалавриат
+        {{ $isUniversity ? 'бакалавриат' : 'специальности' }}
     </template>
 
     <div>
         <div class="institution-specialty-list text-black mt-2">
-            @foreach ($institution->specialties as $specialty)
-                <div class="px-3 py-1">
-                    <div class="flex justify-between py-2 border-b border-black">
-                        <a href="{{ route('specialties.show', $specialty) }}" class="block text-black no-underline">{{ $specialty->title }}</a>
-                        <div>{{ $specialty->code }}</div>
-                    </div>
+            @if ($isUniversity)
+                @foreach ($institution->specialties as $specialty)
+                    <div class="px-3 py-1">
+                        <div class="flex justify-between py-2 border-b border-black">
+                            <a href="{{ route('specialties.show', $specialty) }}" class="block text-black no-underline">{{ $specialty->title }}</a>
+                            <div>{{ $specialty->code }}</div>
+                        </div>
 
-                    <div class="flex py-2">
-                        <div class="w-1/2 px-2 border-r border-black flex flex-col items-center">
-                            <div class="text-sm text-grey-darker">Стоимость за 1 год</div>
-                            <div>{{ $specialty->pivot->study_price }}</div>
-                        </div>
-                        <div class="w-1/2 px-2 flex flex-col items-center">
-                            <div class="text-sm text-grey-darker">Срок обучения</div>
-                            <div>{{ $specialty->pivot->study_period }}</div>
+                        <div class="flex py-2">
+                            <div class="w-1/2 px-2 border-r border-black flex flex-col items-center">
+                                <div class="text-sm text-grey-darker">Стоимость за 1 год</div>
+                                <div>{{ $specialty->pivot->study_price }}</div>
+                            </div>
+                            <div class="w-1/2 px-2 flex flex-col items-center">
+                                <div class="text-sm text-grey-darker">Срок обучения</div>
+                                <div>{{ $specialty->pivot->study_period }}</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
+            @else
+                @foreach ($institution->specialties_distinct as $specialty)
+                    @php
+                        $qualifications = $specialty->qualificationsOf($institution);
+                    @endphp
+
+                    @if (count($qualifications))
+                        <div class="px-3 py-1">
+                            <div class="flex justify-between py-2 border-b border-black">
+                                <a href="{{ route('specialties.show', $specialty) }}" class="block text-black no-underline">{{ $specialty->title }}</a>
+                                <div>{{ $specialty->code }}</div>
+                            </div>
+
+                            @foreach ($qualifications as $qualification)
+                                <div class="college-qualification">
+                                    <div class="text-sm py-1">
+                                        {{ $qualification->getNameWithCodeOrName() }}
+                                    </div>
+                                    <div class="flex py-2">
+                                        <div class="w-1/2 px-2 border-r border-black flex flex-col items-center">
+                                            <div class="text-sm text-grey-darker">Стоимость за 1 год</div>
+                                            <div>{{ $qualification->pivot->study_price ?: '--' }}</div>
+                                        </div>
+                                        <div class="w-1/2 px-2 flex flex-col items-center">
+                                            <div class="text-sm text-grey-darker">Срок обучения</div>
+                                            <div>{{ $qualification->pivot->study_period ?: '--' }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    @endif
+                @endforeach
+            @endif
         </div>
     </div>
 </one-open-accordion>
