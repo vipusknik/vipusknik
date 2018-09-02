@@ -12,6 +12,7 @@ Vue.component('one-open-accordion', require('./components/OneOpenAccordion.vue')
 Vue.component('tabs', require('./components/Tabs.vue'))
 Vue.component('tab', require('./components/Tab.vue'))
 Vue.component('carousel', require('./components/Carousel.vue'))
+Vue.component('typeahead', require('./components/Typeahead.vue'))
 
 window.events = new Vue()
 
@@ -24,3 +25,5 @@ new Vue({
         }
     }
 })
+
+Vue.prototype.$http = axios

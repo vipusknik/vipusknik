@@ -72,7 +72,7 @@ class InstitutionsController extends Controller
     public function rtSearch(Request $request, $institutionType)
     {
         $institutions = Institution::select(
-                'slug as url', "title", 'abbreviation as description', 'city_id', 'type'
+                'slug as url', 'title', 'abbreviation as description', 'city_id', 'type'
             )
             ->ofType($institutionType)
             ->like($request->input('query'))
@@ -89,7 +89,7 @@ class InstitutionsController extends Controller
             $item->description = ($item->description . ' ' ?: '') . City::find($item->city_id)->title; // smth wrong here!
         });
 
-        return response()->json(['results' => $institutions], 200);
+        return $institutions;
     }
 
     public function infiniteScroll(Request $request)

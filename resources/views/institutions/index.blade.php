@@ -29,7 +29,8 @@
                     {{-- Форма поиска для больших экранов --}}
                     <div class="hidden lg:block lg:px-6 lg:py-3 lg:mb-4 lg:bg-orange">
                         <form action="{{ route('institutions.index', $institutionType) }}" method="get" class="lg:w-4/5 lg:w-2/3">
-                            <input type="text" name="query" value="{{ request('query') }}" placeholder="Название учебного заведения..." class="block w-full px-6 py-2 mb-3 text-lg placeholder-text-grey-dark bg-white">
+                            <typeahead name="query" :endpoint="'/institutions/{{ $institutionType }}/search'" value="{{ request('query') }}" placeholder="Название учебного заведения..." class="block w-full mb-3"></typeahead>
+
                             <div class="flex">
                                 <div class="w-3/5 mr-3">
                                     <ss-select class="text-grey" name="specialty">
