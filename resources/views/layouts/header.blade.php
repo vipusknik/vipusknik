@@ -80,12 +80,14 @@
                 <div class="absolute z-10 w-full bg-orange">
                     <div class="container mx-auto p-3">
                         <form action="{{ route('institutions.index', $institutionType) }}" method="get">
-                            <input type="text"
-                                   name="query"
-                                   value="{{ request('query') }}"
-                                   placeholder="Название учебного заведения..."
-                                   class="block w-full mb-4 text-grey px-6 placeholder-text-grey-dark"
-                                   style="padding-top: .937rem; padding-bottom: .937rem;">
+                            <typeahead name="query"
+                                      :endpoint="'/institutions/{{ $institutionType }}/search'"
+                                      placeholder="Название учебного заведения..."
+                                      class="block w-full mb-4 lg:mb-3"
+                                      input-classes="block w-full text-grey px-6 placeholder-text-grey-dark"
+                                      input-styles="padding-top: .937rem; padding-bottom: .937rem;"
+                                      spinner-classes="mt-2">
+                            </typeahead>
 
                             <ss-select class="mb-4 text-grey" name="specialty">
                                 <input type="search" class="block w-full h-12 text-grey px-6" style="padding-top: .937rem; padding-bottom: .937rem;">

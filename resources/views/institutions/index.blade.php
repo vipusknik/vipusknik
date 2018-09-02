@@ -29,7 +29,13 @@
                     {{-- Форма поиска для больших экранов --}}
                     <div class="hidden lg:block lg:px-6 lg:py-3 lg:mb-4 lg:bg-orange">
                         <form action="{{ route('institutions.index', $institutionType) }}" method="get" class="lg:w-4/5 lg:w-2/3">
-                            <typeahead name="query" :endpoint="'/institutions/{{ $institutionType }}/search'" value="{{ request('query') }}" placeholder="Название учебного заведения..." class="block w-full mb-3"></typeahead>
+                            <typeahead name="query"
+                                      :endpoint="'/institutions/{{ $institutionType }}/search'"
+                                      placeholder="Название учебного заведения..."
+                                      class="block w-full mb-3"
+                                      input-classes="block w-full px-6 py-2 text-lg placeholder-text-grey-dark bg-white"
+                                      spinner-classes="mt-px">
+                            </typeahead>
 
                             <div class="flex">
                                 <div class="w-3/5 mr-3">
