@@ -9,7 +9,7 @@
         @include ('layouts.header')
 
         {{-- Контент страницы --}}
-        <div class="flex-1 mt-px lg:bg-grey-light">
+        <div class="flex-1 mt-1 lg:bg-grey-light">
             <main>
                 <div class="hidden lg:block container mx-auto">
                     <div class="lg:bg-white lg:shadow-lg about-lg:mx-20">
@@ -84,26 +84,11 @@
                                                 </tr>
                                             </thead>
 
-                                            <tbody class="institution-specialty-table-body">
-                                                @foreach ($institution->specialties as $specialty)
-                                                    <tr>
-                                                        <td class="py-3 px-4">
-                                                            <div>
-                                                                <a href="{{ route('specialties.show', $specialty) }}" class="text-black no-underline">{{ $specialty->title }}</a>
-                                                            </div>
-                                                        </td>
-                                                        <td class="py-3 text-center">
-                                                            <div class="border-r border-l border-grey-dark">{{ $specialty->code }}</div>
-                                                        </td>
-                                                        <td class="py-3 text-center">
-                                                            <div class="border-r border-grey-dark">{{ $specialty->pivot->study_price }} тг</div>
-                                                        </td>
-                                                        <td class="py-3 text-center">
-                                                            <div>{{ $specialty->pivot->study_period }}</div>
-                                                        </td>
-                                                    </tr>
-                                                @endforeach
-                                            </tbody>
+                                            @if ($institution->type == 'university')
+                                                @include('institutions.partials.university-specialties')
+                                            @else
+                                                @include('institutions.partials.college-specialties')
+                                            @endif
                                         </table>
                                     </tab>
 

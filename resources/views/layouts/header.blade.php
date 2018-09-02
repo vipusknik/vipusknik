@@ -1,5 +1,5 @@
 {{-- Шапка для маленьких и средних экранов --}}
-<div class="flex md:mb-24 lg:hidden" style="margin-bottom: 70px">
+<div class="flex md:mb-24 lg:hidden" style="margin-bottom: 62px">
     <header class="fixed z-20 w-full bg-blue-darker">
         {{-- Зафиксированная навигация --}}
         <div class="container mx-auto">
