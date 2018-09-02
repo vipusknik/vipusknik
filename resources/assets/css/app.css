@@ -105,8 +105,8 @@ button:focus {
     transition-duration: .3s;
  }
 
-.placeholder-text-grey-dark::placeholder {
-    @apply text-grey-dark;
+.placeholder-text-grey::placeholder {
+    @apply text-grey opacity-100;
 }
 
 @responsive {
