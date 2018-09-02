@@ -67,6 +67,12 @@
         border-top-width: 0px;
     }
 
+    @media (min-width: 768px) {
+        .institution-promo-carousel {
+            margin-top: -.875rem;
+        }
+    }
+
     @media (min-width: 992px) {
         .institution-promo-carousel {
             margin-top: -.9rem;
@@ -97,7 +103,7 @@
     }
 
     .insitution-promo-carousel-heading-line {
-        height: 1.3px;
+        height: 1.6px;
     }
 
     @media (min-width: 768px) {
