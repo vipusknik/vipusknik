@@ -21,7 +21,7 @@
     </div>
 
     <!-- the list -->
-    <div v-show="hasItems" class="absolute z-10 w-full bg-white">
+    <div v-show="hasItems" class="absolute z-10 w-full bg-white shadow">
       <a :href="item.url" v-for="(item, $item) in items" :class="activeClass($item)" @click.stop @mousedown="hit" @mousemove="setActive($item)" class="block text-black no-underline typeahead-suggestion px-6 py-2 text-lg">
         <div>{{ item.title }}</div>
         <div v-if="item.description" class="text-sm mt-1">{{ item.description }}</div>

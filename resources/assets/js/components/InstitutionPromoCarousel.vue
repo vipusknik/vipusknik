@@ -103,6 +103,7 @@
     @media (min-width: 992px) {
         .institution-promo-carousel-wrapper {
             width: 250px;
+            min-height: 360px;
         }
     }
 

@@ -66,7 +66,7 @@
                         <thead>
                             <tr class="bg-blue-darker">
                                 <th class="py-3 text-white text-left font-normal {{ $isUniversity ? 'px-4' : 'px-8' }}">
-                                    <div class="">Специальности Бакалавриата</div>
+                                    <div class="">Специальности {{ $isUniversity ? 'Бакалавриата' : '' }}</div>
                                 </th>
                                 <th class="py-3 text-white font-normal">
                                     <div class="border-r border-l border-white">Код</div>
