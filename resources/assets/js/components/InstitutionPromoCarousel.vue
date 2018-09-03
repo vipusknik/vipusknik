@@ -15,9 +15,9 @@
         <div ref="carousel" class="institution-promo-carousel border border-blue-dark">
             <div v-for="institution in institutions" class="carousel-cell md:w-full">
                 <div class="flex pb-3 pt-5 px-5 items-center justify-center lg:flex-col lg:pt-16 lg:pb-10">
-                    <div class="mr-4 md:mr-5 lg:mr-0 lg:mb-10">
+                    <div class="flex-none mr-4 md:mr-5 lg:mr-0 lg:mb-10">
                         <a :href="institution.link" class="block">
-                            <img :src="institution.logo" :alt="institution.name" class="block w-24 lg:w-32">
+                            <img :src="institution.logo" :alt="institution.name" class="block h-16 lg:h-32">
                         </a>
                     </div>
 
