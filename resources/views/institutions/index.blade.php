@@ -39,7 +39,7 @@
 
                             <div class="flex">
                                 <div class="w-3/5 mr-3">
-                                    <ss-select class="text-grey" name="specialty">
+                                    <ss-select class="text-grey-darkest" name="specialty">
                                         <input type="search" class="block w-full py-2 px-6 text-grey">
                                         <option value="" class="py-1 px-6">
                                             Специальности{{ $institutionType == 'colleges' ? ', квалификации' : '' }}
@@ -54,7 +54,7 @@
 
                                 <div class="w-2/5 flex">
                                     <div class="w-4/5 mr-3">
-                                        <ss-select class="text-grey" name="city">
+                                        <ss-select class="text-grey-darkest" name="city">
                                             <input type="search" class="block w-full py-2 px-6 text-grey">
                                             <option value="" class="px-6 py-1">Город</option>
                                             @foreach ($cities as $city)

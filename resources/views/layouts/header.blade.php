@@ -89,7 +89,7 @@
                                       spinner-classes="mt-2">
                             </typeahead>
 
-                            <ss-select class="mb-4 text-grey" name="specialty">
+                            <ss-select class="mb-4 text-grey-darkest" name="specialty">
                                 <input type="search" class="block w-full h-12 text-grey px-6" style="padding-top: .937rem; padding-bottom: .937rem;">
                                 <option value="" class="py-2 px-6">
                                     Специальности{{ $institutionType == 'colleges' ? ', квалификации' : '' }}
@@ -102,7 +102,7 @@
                             </ss-select>
 
                             <div class="flex">
-                                <ss-select class="flex-1 min-w-0 h-full text-grey mr-2" name="city">
+                                <ss-select class="flex-1 min-w-0 h-full text-grey-darkest mr-2" name="city">
                                     <input type="search" class="block w-full h-12 text-grey px-6" style="padding-top: .937rem; padding-bottom: .937rem;">
                                     <option value="" class="px-6 py-2">Город</option>
                                     @foreach ($cities as $city)
