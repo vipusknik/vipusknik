@@ -119,7 +119,7 @@
 
         {{-- Карта --}}
         @if ($institution->map)
-            <div class="bg-blue-darker py-3 px-10 mb-2">
+            <div class="bg-blue-light py-3 px-10 mb-2">
                 <div>
                     {!! $institution->map->source_code !!}
                 </div>
