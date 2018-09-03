@@ -121,12 +121,19 @@
     }
 </script>
 
-<style scoped>
+<style>
     .dropdown-arrow {
         background-image: url(/img/icons/down-arrow.svg);
         background-size: 3rem .812rem;
         background-position: right;
         background-repeat: no-repeat;
+    }
+
+    @-moz-document url-prefix() {
+        .dropdown-arrow {
+            background-size: .895rem .75rem;
+            background-position-x: 97%;
+        }
     }
 
     .placeholder-text-black::placeholder  {
