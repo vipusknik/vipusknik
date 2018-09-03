@@ -21,9 +21,11 @@
                     г. {{ $institution->city->title }}
                 </div>
 
-                <a href="{{ $institution->web_site_url }}" target="_blank" class="block px-8 py-1 text-sm text-blue-dark text-center font-bold bg-white opacity-90">
-                    {{ $institution->web_site_url }}
-                </a>
+                @if ($institution->web_site_url)
+                    <a href="{{ $institution->web_site_url }}" target="_blank" class="block px-8 py-1 text-sm text-blue-dark text-center font-bold bg-white opacity-90">
+                        {{ $institution->web_site_url }}
+                    </a>
+                @endif
             </div>
         </div>
 
