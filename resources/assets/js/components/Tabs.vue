@@ -2,7 +2,7 @@
     <div class="w-full">
         <div class="flex flex-col">
             <!-- tab names -->
-            <div class="flex justify-end">
+            <div class="flex justify-end z-10">
                 <div v-for="tab in tabs" @click="select(tab)" class="flex tab text-white cursor-pointer select-none">
                     <div class="block text-white py-3 pl-6 pr-5" :class="tab.bgClass + (tab.selected ? ' z-20': '')">
                         {{ tab.name }}
