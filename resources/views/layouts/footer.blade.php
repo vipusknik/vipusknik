@@ -1,5 +1,5 @@
-<div class="bg-blue-darker">
-    <div class="container mx-auto py-5">
+<div class="lg:bg-grey-light">
+    <div class="container mx-auto bg-blue-darker py-5">
         <div class="flex text-white">
             <div class="w-1/3 flex flex-col items-center border-r border-white">
                 <div class="text-lg">Воспользуйтесь <a href="#" @click="$modal.show('feedback-modal')" class="text-orange no-underline">обратной связью</a></div>
