@@ -65,16 +65,16 @@
                     <table class="w-full">
                         <thead>
                             <tr class="bg-blue-darker">
-                                <th class="py-3 text-white text-left font-normal bg-blue-darker sticky z-10 {{ $isUniversity ? 'px-4' : 'px-8' }}" style="top: 93px">
+                                <th class="py-3 text-white text-left font-normal bg-blue-darker sticky z-10 {{ $isUniversity ? 'px-4' : 'px-8' }}" style="top: {{ $isUniversity ? '93px' : '58px' }}">
                                     <div class="">Специальности {{ $isUniversity ? 'Бакалавриата' : '' }}</div>
                                 </th>
-                                <th class="py-3 text-white font-normal bg-blue-darker sticky z-10" style="top: 93px">
+                                <th class="py-3 text-white font-normal bg-blue-darker sticky z-10" style="top: {{ $isUniversity ? '93px' : '58px' }}">
                                     <div class="border-r border-l border-white">Код</div>
                                 </th>
-                                <th class="py-3 text-white font-normal bg-blue-darker sticky z-10" style="top: 93px">
+                                <th class="py-3 text-white font-normal bg-blue-darker sticky z-10" style="top: {{ $isUniversity ? '93px' : '58px' }}">
                                     <div class="border-r border-white">Стоимость за год</div>
                                 </th>
-                                <th class="py-3 text-white font-normal bg-blue-darker sticky z-10" style="top: 93px">
+                                <th class="py-3 text-white font-normal bg-blue-darker sticky z-10" style="top: {{ $isUniversity ? '93px' : '58px' }}">
                                     <div class="">Срок обучения</div>
                                 </th>
                             </tr>
