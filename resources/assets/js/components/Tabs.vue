@@ -1,8 +1,8 @@
 <template>
     <div class="w-full">
-        <div class="flex flex-col">
+        <div ref="tabs" class="flex flex-col sticky z-10" style="top: 58px">
             <!-- tab names -->
-            <div class="flex justify-end z-10">
+            <div ref="tab-names" class="flex justify-end z-10">
                 <div v-for="tab in tabs" @click="select(tab)" class="flex tab text-white cursor-pointer select-none">
                     <div class="block text-white py-3 pl-6 pr-5" :class="tab.bgClass + (tab.selected ? ' z-20': '')">
                         {{ tab.name }}
@@ -32,6 +32,18 @@
 
         mounted() {
             this.tabs = this.$children
+
+            let originalOffsetTop = this.$refs['tabs'].offsetTop - 58
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY >= originalOffsetTop) {
+                    this.$refs['tab-names'].classList.add('order-2') // Меняем местами блок с названиями вкладок и декоративную линию
+                    document.querySelectorAll('.triangle').forEach(elem => elem.classList.add('triangle-down')) // Поварачиваем подложки вкладок
+                } else {
+                    this.$refs['tab-names'].classList.remove('order-2')
+                    document.querySelectorAll('.triangle').forEach(elem => elem.classList.remove('triangle-down'))
+                }
+            })
         },
 
         computed: {
@@ -57,7 +69,11 @@
 
     .triangle {
         border-bottom-width: 42px;
-        border-bottom-style: solid;
         border-right: 18px solid transparent;
+    }
+
+    .triangle-down {
+        border-bottom-width: 0;
+        border-top-width: 42px;
     }
 </style>
