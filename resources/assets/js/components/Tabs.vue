@@ -37,10 +37,10 @@
 
             window.addEventListener('scroll', () => {
                 if (window.scrollY >= originalOffsetTop) {
-                    this.$refs['tab-names'].classList.add('order-2') // Меняем местами блок с названиями вкладок и декоративную линию
+                    this.$refs['tab-names'].classList.add('order-2', 'bg-white') // Меняем местами блок с названиями вкладок и декоративную линию
                     document.querySelectorAll('.triangle').forEach(elem => elem.classList.add('triangle-down')) // Поварачиваем подложки вкладок
                 } else {
-                    this.$refs['tab-names'].classList.remove('order-2')
+                    this.$refs['tab-names'].classList.remove('order-2', 'bg-white')
                     document.querySelectorAll('.triangle').forEach(elem => elem.classList.remove('triangle-down'))
                 }
             })

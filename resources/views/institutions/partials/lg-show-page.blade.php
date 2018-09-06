@@ -57,7 +57,7 @@
 
                 <tab name="{{ $isUniversity ? 'бакалавриат' : 'специальности' }}" bg-class="bg-blue">
                     @if ($isUniversity)
-                        <div class="px-8 py-2 sticky z-10 bg-white" style="top: 58px">
+                        <div class="px-8 py-2 sticky z-10 bg-white" style="top: 108px">
                             <p class="">Бакалавриат - форма трех или пятигодичного обучения студентов, дающая базовое высшее образование и степень бакалавра.</p>
                         </div>
                     @endif
@@ -65,16 +65,16 @@
                     <table class="w-full">
                         <thead>
                             <tr class="bg-blue-darker">
-                                <th class="py-3 text-white text-left font-normal bg-blue-darker sticky z-10 {{ $isUniversity ? 'px-4' : 'px-8' }}" style="top: {{ $isUniversity ? '93px' : '58px' }}">
+                                <th class="py-3 text-white text-left font-normal bg-blue-darker sticky z-10 {{ $isUniversity ? 'px-4' : 'px-8' }}" style="top: {{ $isUniversity ? '143px' : '108px' }}">
                                     <div class="">Специальности {{ $isUniversity ? 'Бакалавриата' : '' }}</div>
                                 </th>
-                                <th class="py-3 text-white font-normal bg-blue-darker sticky z-10" style="top: {{ $isUniversity ? '93px' : '58px' }}">
+                                <th class="py-3 text-white font-normal bg-blue-darker sticky z-10" style="top: {{ $isUniversity ? '143px' : '108px' }}">
                                     <div class="border-r border-l border-white">Код</div>
                                 </th>
-                                <th class="py-3 text-white font-normal bg-blue-darker sticky z-10" style="top: {{ $isUniversity ? '93px' : '58px' }}">
+                                <th class="py-3 text-white font-normal bg-blue-darker sticky z-10" style="top: {{ $isUniversity ? '143px' : '108px' }}">
                                     <div class="border-r border-white">Стоимость за год</div>
                                 </th>
-                                <th class="py-3 text-white font-normal bg-blue-darker sticky z-10" style="top: {{ $isUniversity ? '93px' : '58px' }}">
+                                <th class="py-3 text-white font-normal bg-blue-darker sticky z-10" style="top: {{ $isUniversity ? '143px' : '108px' }}">
                                     <div class="">Срок обучения</div>
                                 </th>
                             </tr>
