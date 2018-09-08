@@ -59,11 +59,11 @@
                         <div class="flex py-2">
                             <div class="w-1/2 px-2 border-r border-black flex flex-col items-center">
                                 <div class="text-sm text-grey-darker">Стоимость за 1 год</div>
-                                <div>{{ $specialty->pivot->study_price ?: '--' }}</div>
+                                <div>{{ $specialty->pivot->study_price ? $specialty->pivot->study_price . ' тг' : '--' }}</div>
                             </div>
                             <div class="w-1/2 px-2 flex flex-col items-center">
                                 <div class="text-sm text-grey-darker">Срок обучения</div>
-                                <div>{{ $specialty->pivot->study_period ?: '--' }}</div>
+                                <div>{{ $specialty->pivot->study_period ? $specialty->pivot->study_period . ' ' . years($specialty->pivot->study_period): '--' }}</div>
                             </div>
                         </div>
                     </div>
@@ -89,11 +89,11 @@
                                     <div class="flex py-2">
                                         <div class="w-1/2 px-2 border-r border-black flex flex-col items-center">
                                             <div class="text-sm text-grey-darker">Стоимость за 1 год</div>
-                                            <div>{{ $qualification->pivot->study_price ?: '--' }}</div>
+                                            <div>{{ $qualification->pivot->study_price ? $qualification->pivot->study_price . ' тг' : '--' }}</div>
                                         </div>
                                         <div class="w-1/2 px-2 flex flex-col items-center">
                                             <div class="text-sm text-grey-darker">Срок обучения</div>
-                                            <div>{{ $qualification->pivot->study_period ?: '--' }}</div>
+                                            <div>{{ $qualification->pivot->study_period ? $qualification->pivot->study_period . years($qualification->pivot->study_period): '--' }}</div>
                                         </div>
                                     </div>
                                 </div>

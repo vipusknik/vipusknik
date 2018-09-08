@@ -104,7 +104,7 @@
                                             <div class="border-r border-grey-dark">{{ $specialty->pivot->study_price ? $specialty->pivot->study_price . ' тг': '--' }}</div>
                                         </td>
                                         <td class="py-3 text-center">
-                                            <div>{{ $specialty->pivot->study_period ?: '--' }}</div>
+                                            <div>{{ $specialty->pivot->study_period ? $specialty->pivot->study_period . ' ' . years($specialty->pivot->study_period) : '--' }}</div>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -138,7 +138,7 @@
                                                     <div class="py-3 border-r border-brown-light">{{ $qualification->pivot->study_price ? $qualification->pivot->study_price . ' тг' : '--' }}</div>
                                                 </td>
                                                 <td class="text-center">
-                                                    <div class="py-3">{{ $qualification->pivot->study_period ?: '--' }}</div>
+                                                    <div class="py-3">{{ $qualification->pivot->study_period ? $qualification->pivot->study_period . ' ' . years($qualification->pivot->study_period) : '--' }}</div>
                                                 </td>
                                             </tr>
                                         @endforeach
