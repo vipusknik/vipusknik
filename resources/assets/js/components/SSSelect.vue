@@ -12,7 +12,7 @@
                    :placeholder="selectedOption ? selectedOption.text : ''"
                    @click="toggleActive"
                    class="dropdown-arrow truncate"
-                   :class="inputClasses + (!active ? ' placeholder-text-black' : 'cursor-text')"
+                   :class="inputClasses + (!active ? ' placeholder-text-black' : ' cursor-text')"
                    :style="inputStyles">
 
             <div v-show="active" class="absolute z-10 min-w-full bg-white border border-grey-dark overflow-y-auto" style="max-height: 16rem">
