@@ -39,6 +39,8 @@
             </button>
             <div class="text-orange select-none">Наверх</div>
         </jump-up-button>
+
+        @include('layouts.feedback-modal')
     </div>
 
     <script src="{{ mix('js/app.js') }}"></script>
