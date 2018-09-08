@@ -7,7 +7,7 @@
             <svg class="absolute pin-r mr-3 flex-none text-right ml-2 inline-block w-3 h-3 fill-current transition-linear transition-fast" :class="{ 'rotate-x-180': isOpen }" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 386.257 386.257"><path d="M0 96.879l193.129 192.5 193.128-192.5z"/></svg>
         </div>
 
-        <div v-show="isOpen">
+        <div v-if="isOpen">
             <slot></slot>
         </div>
     </div>
