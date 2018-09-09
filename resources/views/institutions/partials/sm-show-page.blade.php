@@ -14,7 +14,7 @@
     <div>
         <div class="relative">
             {{-- Главное фото вуза --}}
-            <img src="/img/institutions/default.jpg" alt="{{ $institution->title }} главное фото" class="block">
+            <img src="{{ $institution->profilePhoto() }}" alt="{{ $institution->title }} главное фото" class="block">
 
             <div class="absolute z-10 pin-t mt-2 pin-r">
                 <div class="px-8 py-1 text-sm text-blue-dark text-center bg-white opacity-90 mb-2">

@@ -131,6 +131,17 @@ class Institution extends Model implements HasMediaConversions
         return $this->logo() !== null;
     }
 
+    public function profilePhoto($size = '')
+   {
+        $default = '/img/institutions/default.jpg';
+
+        if (! $this->is_paid) return $default;
+
+        $photo = $this->getMedia('profile-photo')->first();
+
+       return $photo ? $photo->getUrl($size) : $default;
+   }
+
     public function registerMediaConversions()
     {
         $this->addMediaConversion('thumb')
