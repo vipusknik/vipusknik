@@ -18,7 +18,6 @@
                     @include ('institutions.partials.sm-show-page')
                 </div>
 
-                <div class="hidden lg:block container mx-auto">
                 <div class="hidden lg:flex container mx-auto">
                     @include ('institutions.partials.lg-show-page')
                 </div>
