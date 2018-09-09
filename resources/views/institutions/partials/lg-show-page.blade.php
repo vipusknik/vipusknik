@@ -32,7 +32,9 @@
                                 </div>
                             @endif
 
-                            <a href="{{ $institution->web_site_url }}" target="_blank" class="block text-xl text-blue-dark mt-2 no-underline hover:underline">{{ $institution->web_site_url }}</a>
+                            <a href="{{ $institution->web_site_url }}" target="_blank" class="block text-xl text-blue-dark mt-2 no-underline hover:underline">
+                                {{ $institution->web_site_display_title ?: $instiution->getBaseUrl() }}
+                            </a>
                         </div>
                     </div>
 
