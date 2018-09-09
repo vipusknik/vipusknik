@@ -8,7 +8,7 @@
         $isCollege = !$isUniversity;
     @endphp
 
-    <div class="min-h-screen flex flex-col">
+    <div class="flex flex-col">
         @include ('layouts.header')
 
         {{-- Контент страницы --}}
@@ -19,6 +19,7 @@
                 </div>
 
                 <div class="hidden lg:block container mx-auto">
+                <div class="hidden lg:flex container mx-auto">
                     @include ('institutions.partials.lg-show-page')
                 </div>
             </main>

@@ -1,4 +1,4 @@
-<div class="lg:bg-white lg:shadow-lg about-lg:mx-20" style="min-height: 700px">
+<div class="lg:bg-white lg:shadow-lg about-lg:mx-20">
     <div>
         <div>
             <img src="/img/institutions/default.jpg" alt="{{ $institution->title }}" class="block w-full">
