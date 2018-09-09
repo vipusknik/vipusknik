@@ -4,7 +4,7 @@
             <img src="{{ $institution->profilePhoto() }}" alt="{{ $institution->title }}" class="block w-full">
         </div>
 
-        <div class="flex mb-4">
+        <div class="flex">
             <tabs style="margin-top: -43px">
                 <tab name="{{ $institution->title }}" bg-class="bg-orange" :selected-initial="true">
                     <div class="flex py-4 px-5">
@@ -33,7 +33,7 @@
                             @endif
 
                             <a href="{{ $institution->web_site_url }}" target="_blank" class="block text-xl text-blue-dark mt-2 no-underline hover:underline">
-                                {{ $institution->web_site_display_title ?: $instiution->getBaseUrl() }}
+                                {{ $institution->web_site_display_title ?: $institution->getBaseUrl() }}
                             </a>
                         </div>
                     </div>
@@ -152,25 +152,29 @@
                 </tab>
 
                 <tab name="контакты" bg-class="bg-blue-dark">
-                    <div class="flex bg-blue-dark mt-3 px-6 py-2">
-                        <div class="w-2/3 py-2">
-                            <h3 class="text-white font-normal mb-4">
-                                Контакты {{ $isUniversity ? 'вуза' : 'колледжа' }}:
-                            </h3>
+                    <div class="mt-3">
+                        <div class="flex bg-blue-dark px-6 py-2">
+                            <div class="w-2/3 py-2">
+                                <h3 class="text-white font-normal mb-4">
+                                    Контакты {{ $isUniversity ? 'вуза' : 'колледжа' }}:
+                                </h3>
 
-                            @include('institutions.partials.contacts')
-                        </div>
+                                @include('institutions.partials.contacts')
+                            </div>
 
-                        <div class="w-1/3">
-                            {{-- Карта --}}
-                            @if ($institution->map)
-                                <div class="py-3 px-10 mb-2">
-                                    <div>
-                                        {!! $institution->map->source_code !!}
+                            <div class="w-1/3">
+                                {{-- Карта --}}
+                                @if ($institution->map)
+                                    <div class="py-3 px-10 mb-2">
+                                        <div>
+                                            {!! $institution->map->source_code !!}
+                                        </div>
                                     </div>
-                                </div>
-                            @endif
+                                @endif
+                            </div>
                         </div>
+
+                        @include ('institutions.partials.social-media-sites')
                     </div>
                 </tab>
 

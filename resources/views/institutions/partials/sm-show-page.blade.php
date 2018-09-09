@@ -23,7 +23,7 @@
 
                 @if ($institution->web_site_url)
                     <a href="{{ $institution->web_site_url }}" target="_blank" class="block px-8 py-1 text-sm text-blue-dark text-center font-bold bg-white opacity-90">
-                        {{ $institution->web_site_display_title ?: $instiution->getBaseUrl() }}
+                        {{ $institution->web_site_display_title ?: $institution->getBaseUrl() }}
                     </a>
                 @endif
             </div>
@@ -114,7 +114,10 @@
     <div>
         {{-- Контакты --}}
         <div class="px-6 py-3">
-            @include('institutions.partials.contacts')
+            <div class="mb-4">
+                @include('institutions.partials.contacts')
+            </div>
+            @include ('institutions.partials.social-media-sites')
         </div>
 
         {{-- Карта --}}

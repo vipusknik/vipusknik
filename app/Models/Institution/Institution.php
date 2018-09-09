@@ -18,6 +18,7 @@ use Spatie\MediaLibrary\{
 };
 
 use Illuminate\Http\Request;
+use Exception;
 
 class Institution extends Model implements HasMediaConversions
 {
@@ -140,6 +141,17 @@ class Institution extends Model implements HasMediaConversions
         $photo = $this->getMedia('profile-photo')->first();
 
        return $photo ? $photo->getUrl($size) : $default;
+   }
+
+   public function hasSocialMediaSite($site)
+   {
+        $sites = [ 'vk', 'facebook', 'twitter', 'instagram' ];
+
+        if (! in_array($site, $sites)) {
+            throw new Exception('Allowed social media sites are ' . implode($sites), ', ');
+        }
+
+        return $this->{$site . '_url'} && $this->{$site . '_display_title'};
    }
 
     public function registerMediaConversions()
