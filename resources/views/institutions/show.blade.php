@@ -14,7 +14,7 @@
         {{-- Контент страницы --}}
         <div class="flex-1 mt-1 lg:bg-grey-light lg:mt-0">
             <main class="flex h-full">
-                <div class="lg:hidden">
+                <div class="w-full lg:hidden">
                     @include ('institutions.partials.sm-show-page')
                 </div>
 
