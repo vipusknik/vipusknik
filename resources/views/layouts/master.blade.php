@@ -28,10 +28,6 @@
     <div id="app" v-cloak>
         @yield ('content')
 
-        <div class="hidden lg:block">
-            @include('layouts.footer')
-        </div>
-
         {{-- Кнопка наверх --}}
         <jump-up-button :always-visible="true" class="hidden lg:flex lg:flex-col lg:items-center lg:pin-l lg:pin-b lg:ml-10 lg:mb-10 cursor-pointer">
             <button class="w-8 h-8 rounded-sm bg-orange mb-2">

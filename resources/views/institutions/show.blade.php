@@ -8,12 +8,12 @@
         $isCollege = !$isUniversity;
     @endphp
 
-    <div class="flex flex-col">
+    <div class="h-screen flex flex-col">
         @include ('layouts.header')
 
         {{-- Контент страницы --}}
         <div class="flex-1 mt-1 lg:bg-grey-light lg:mt-0">
-            <main>
+            <main class="flex h-full">
                 <div class="lg:hidden">
                     @include ('institutions.partials.sm-show-page')
                 </div>
@@ -22,6 +22,10 @@
                     @include ('institutions.partials.lg-show-page')
                 </div>
             </main>
+        </div>
+
+        <div class="hidden lg:block">
+            @include('layouts.footer')
         </div>
     </div>
 @endsection

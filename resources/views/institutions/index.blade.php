@@ -125,5 +125,9 @@
                 </div>
             </main>
         </div>
+
+        <div class="hidden lg:block">
+            @include('layouts.footer')
+        </div>
     </div>
 @endsection
