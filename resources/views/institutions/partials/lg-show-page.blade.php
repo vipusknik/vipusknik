@@ -148,6 +148,20 @@
                                 @endforeach
                             </tbody>
                         @endif
+
+                        <tbody>
+                            <tr>
+                                <td colspan="5" class="py-1 px-8">
+                                    @if ($isUniversity && !count($institution->specialties))
+                                        @include('institutions.partials.no-info')
+                                    @endif
+
+                                    @if ($isCollege && !$institution->hasQualificationsWithParent())
+                                        @include('institutions.partials.no-info')
+                                    @endif
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
                 </tab>
 

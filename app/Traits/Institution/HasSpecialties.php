@@ -51,4 +51,11 @@ trait HasSpecialties
             ->where('type', 'specialty')
             ->groupBy('specialty_id');
     }
+
+    public function hasQualificationsWithParent()
+    {
+        return (bool) $this->qualifications->pluck('parent_id')
+            ->intersect($this->specialties->pluck('id'))
+            ->count();
+    }
 }

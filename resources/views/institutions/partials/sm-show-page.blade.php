@@ -103,6 +103,14 @@
                 @endforeach
             @endif
         </div>
+
+        @if ($isUniversity && !count($institution->specialties))
+            @include('institutions.partials.no-info')
+        @endif
+
+        @if ($isCollege && !$institution->hasQualificationsWithParent())
+            @include('institutions.partials.no-info')
+        @endif
     </div>
 </one-open-accordion>
 
