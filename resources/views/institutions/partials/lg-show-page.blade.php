@@ -1,4 +1,4 @@
-<div class="lg:bg-white lg:shadow-lg about-lg:mx-20">
+<div class="lg:w-full lg:bg-white lg:shadow-lg about-lg:mx-20">
     <div>
         <div>
             <img src="{{ $institution->profilePhoto() }}" alt="{{ $institution->title }}" class="block w-full">
