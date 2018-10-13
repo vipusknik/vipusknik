@@ -168,6 +168,7 @@ return [
          */
         Laravel\Tinker\TinkerServiceProvider::class,
         Spatie\MediaLibrary\MediaLibraryServiceProvider::class,
+        Sentry\SentryLaravel\SentryLaravelServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -183,12 +184,6 @@ return [
          */
         App\Providers\ComposerServiceProvider::class,
         App\Providers\EloquentServiceProvider::class,
-
-        /**
-         * Package service providers
-         */
-        Sentry\SentryLaravel\SentryLaravelServiceProvider::class,
-
     ],
 
     /*
@@ -244,7 +239,7 @@ return [
         'Translator' => App\Support\Lang\Translator::class,
         'Specialty' => App\Models\Specialty\Specialty::class,
         'Institution' => App\Models\Institution\Institution::class,
-        
+
         /**
          * Package aliases
          */

@@ -9,7 +9,11 @@
     @endphp
 
     <div class="h-screen flex flex-col">
-        @include ('layouts.header')
+        @component('layouts.header')
+            @slot ('smHeaderDropdownMenu')
+                @include ('institutions.sm-header-dropdown-menu')
+            @endslot
+        @endcomponent
 
         {{-- Контент страницы --}}
         <div class="flex-1 mt-1 lg:bg-grey-light lg:mt-0">
