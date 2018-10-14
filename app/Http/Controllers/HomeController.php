@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $articles = Article::all();
+        $articles = Article::orderBy('created_at')->take(3)->get();
 
         return view('home', compact('articles'));
     }

@@ -7,6 +7,8 @@
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/price', 'CommerceController@index')->name('welcome2');
 
+Route::get('/search', 'SearchController@index');
+
 /**
  * Institutions
  */
