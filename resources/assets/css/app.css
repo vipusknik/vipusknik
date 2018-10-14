@@ -18,6 +18,10 @@ button:focus {
     outline: none;
 }
 
+.font-franklin-gothic {
+    font-family: 'Franklin Gothic', sans-serif;
+}
+
 /**
  * This injects any component classes registered by plugins.
  *

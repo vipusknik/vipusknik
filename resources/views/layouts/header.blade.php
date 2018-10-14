@@ -108,7 +108,7 @@
 
 {{--Шапка для больших экранов --}}
 <div class="hidden lg:flex mb-16">
-    <div class="fixed z-30 w-full bg-blue-darker font-sans">
+    <div class="fixed z-30 w-full bg-blue-darker font-franklin-gothic">
         <div class="container mx-auto">
             <div class="about-lg:mx-20">
                 <header class="flex">
@@ -119,16 +119,16 @@
                     </div>
                     <div class="w-1/2">
                         <div class="flex h-full">
-                            <a href="/institutions/universities" class="flex items-center px-6 text-lg text-white font-semibold no-underline hover:bg-blue-dark">
+                            <a href="/institutions/universities" class="flex items-center px-6 text-lg text-white tracking-wide no-underline hover:bg-blue-dark">
                                 ВУЗы
                             </a>
-                            <a href="/institutions/colleges" class="flex items-center px-6 text-lg text-white font-semibold no-underline hover:bg-blue-dark">
+                            <a href="/institutions/colleges" class="flex items-center px-6 text-lg text-white tracking-wide no-underline hover:bg-blue-dark">
                                 Колледжи
                             </a>
-                            <a href="/specialties/directions" class="flex items-center px-6 text-lg text-white font-semibold no-underline hover:bg-blue-dark">
+                            <a href="/specialties/directions" class="flex items-center px-6 text-lg text-white tracking-wide no-underline hover:bg-blue-dark">
                                 Специальности
                             </a>
-                            <a href="/ent" class="flex items-center px-6 text-lg text-white font-semibold no-underline hover:bg-blue-dark">
+                            <a href="/ent" class="flex items-center px-6 text-lg text-white tracking-wide no-underline hover:bg-blue-dark">
                                 ЕНТ
                             </a>
                         </div>

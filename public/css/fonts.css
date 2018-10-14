@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Franklin Gothic';
+    src: url('../fonts/Franklin Gothic.eot');
+    src: local('☺'), url('../fonts/Franklin Gothic.woff') format('woff'), url('../fonts/Franklin Gothic.ttf') format('truetype'), url('../fonts/Franklin Gothic.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
