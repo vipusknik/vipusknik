@@ -8,7 +8,7 @@
                 <div class="bg-blue-lightish flex-1 text-center py-2">Подготовиться к экзаменам</div>
                 <div class="triangle-top-left"></div>
             </a>
-            <a href="/testent" class="flex-1 flex no-underline text-white font-franklin-gothic">
+            <a href="/professions/categories" class="flex-1 flex no-underline text-white font-franklin-gothic">
                 <div class="bg-blue-lightish flex-1 text-center py-2">Выбрать профессию</div>
                 <div class="triangle-top-left"></div>
             </a>

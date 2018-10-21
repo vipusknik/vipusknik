@@ -25,7 +25,7 @@
                         <a href="/articles/kak-podgotovitsya-k-ekzamenam" class="text-blue-lightish border-b border-blue-lightish no-underline leading-none tracking-tight mb-2">
                             Подготовиться к экзаменам
                         </a>
-                        <a href="/testent" class="text-blue-lightish border-b border-blue-lightish no-underline leading-none tracking-tight mb-2">
+                        <a href="/professions/categories" class="text-blue-lightish border-b border-blue-lightish no-underline leading-none tracking-tight mb-2">
                             Выбрать профессию
                         </a>
                         <a href="/ent" class="text-blue-lightish border-b border-blue-lightish no-underline leading-none tracking-tight">
