@@ -91,7 +91,7 @@
 </div>
 
 {{-- Articles --}}
-<div class="flex px-4 bg-right bg-contain bg-no-repeat" style="background-image: url('/img/cheerful-man-and-woman-with-diplomas.jpg'), linear-gradient(to right, #ffffff, #fdfdfd, #fafafa, #f8f7f8, #f6f5f5);">
+<div class="flex px-4 bg-no-repeat bg-contain bg-right" style="background-image: url('/img/cheerful-man-and-woman-with-diplomas.jpg'), linear-gradient(to right, #ffffff, #fdfdfd, #fafafa, #f8f7f8, #f6f5f5)">
     <div class="w-3/5">
         <div class="mb-4">
             <h2 class="mini-article-heading font-hairline flex pl-32 items-center font-franklin-gothic text-blue-lightish text-center uppercase mb-1">

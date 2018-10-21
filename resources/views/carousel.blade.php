@@ -1,7 +1,7 @@
 {{-- Carousel --}}
 <div class="flex items-center justify-center text-center px-12 py-5">
     <div class="mr-3">
-        <img src="/img/main-banner-girl.jpg" alt="" class="block" style="height: 220px">
+        <img src="/img/main-banner-girl.jpg" alt="" class="block" style="height: 185px">
     </div>
 
     <div style="width: 600px">
