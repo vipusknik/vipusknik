@@ -14,7 +14,7 @@ class Unt
         // Получить кол-во месяцев до ент
         $monthsTo = $date->diffInMonths(Carbon::now());
         // если осталось больше месяца посчитать строку до ент
-        if ($monthsTo > 0) {
+        if ($monthsTo > 3) {
             return 'до ЕНТ ' .
                     conjugate_by_number($monthsTo, 'остался', 'осталось', 'осталось', 'осталось') . ' ' .
                     $monthsTo . ' ' .
