@@ -10,6 +10,6 @@ class HomeController extends Controller
     {
         $articles = Article::orderBy('created_at')->take(3)->get();
 
-        return view('home', compact('articles', 'untCounter'));
+        return view('home', compact('articles'));
     }
 }

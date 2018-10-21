@@ -154,6 +154,7 @@ module.exports = {
   */
 
   screens: {
+    'xs': '468px',
     'sm': '576px',
     'md': '768px',
     'lg': '992px',

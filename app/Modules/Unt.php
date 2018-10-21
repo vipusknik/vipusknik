@@ -15,7 +15,7 @@ class Unt
         $monthsTo = $date->diffInMonths(Carbon::now());
         // если осталось больше месяца посчитать строку до ент
         if ($monthsTo > 0) {
-            return 'До ЕНТ ' .
+            return 'до ЕНТ ' .
                     conjugate_by_number($monthsTo, 'остался', 'осталось', 'осталось', 'осталось') . ' ' .
                     $monthsTo . ' ' .
                     conjugate_by_number($monthsTo, 'месяц', 'месяца', 'месяцев', 'месяцев');
@@ -23,7 +23,7 @@ class Unt
 
         // иначе посчитать строку дней
         $daysTo = $date->diffInDays(Carbon::now());
-        return 'До ЕНТ ' .
+        return 'до ЕНТ ' .
                conjugate_by_number($daysTo, 'остался', 'осталось', 'осталось', 'осталось') . ' ' .
                $daysTo . ' ' .
                conjugate_by_number($daysTo, 'день', 'дня', 'дней', 'дней');
