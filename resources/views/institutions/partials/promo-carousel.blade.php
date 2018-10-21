@@ -6,14 +6,14 @@
             'name' => 'Академический инновационный университет',
             'city' => 'Семей',
             'logo' => 'http://mustim09.beget.tech/storage/389/8cca0jpg.jpeg',
-            'link' => '#'
+            'link' => '/institutions/university/akademicheskiy-innovatsionnyy-universitet'
         ],
 
         [
             'name' => 'Карагандинский государственный университет имени академика Е. А. Букетова',
             'city' => 'Семей',
             'logo' => 'http://mustim09.beget.tech/storage/381/ksu-logogif.gif',
-            'link' => '#'
+            'link' => '/institutions/university/karagandinskiy-gosudarstvennyy-universitet-imeni-akademika-e-a-buketova'
         ],
     ];
 
