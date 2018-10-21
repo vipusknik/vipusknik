@@ -137,3 +137,26 @@ button:focus {
 .v--modal {
     border-radius: 0 !important;
 }
+
+.triangle-top-left {
+    width: 0;
+    height: 0;
+    border-top: 34px solid #428cae;
+    border-right: 26px solid transparent;
+}
+
+.mini-article-heading {
+    font-size: 1.65rem;
+}
+
+@responsive {
+    .text-4rem {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .main-banner-girl {
+        height: 185px
+    }
+}

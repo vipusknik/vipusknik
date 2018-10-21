@@ -2,33 +2,6 @@
 
 @section ('title', 'Портал для абитуриентов')
 
-@section ('styles')
-    <style>
-        .triangle-top-left {
-            width: 0;
-            height: 0;
-            border-top: 34px solid #428cae;
-            border-right: 26px solid transparent;
-        }
-
-        .mini-article-heading {
-            font-size: 1.65rem
-        }
-
-        @media (min-width: 992px) {
-            .lg\:text-4rem {
-                font-size: 4rem;
-            }
-        }
-
-        @media (min-width: 992px) {
-            .main-banner-girl {
-                height: 185px
-            }
-        }
-    </style>
-@endsection
-
 @section('content')
     <div class="min-h-screen flex flex-col">
         @component('layouts.header')
@@ -79,13 +52,13 @@
                         <div class="font-cuprum text-grey-darkest">
                             <p class="mb-1 pl-3"><span class="pl-3">Извечный</span> вопрос: кем я хочу быть?! Как выбрать ту самую, именно Вам подходящую профессию (специальность)? Как выбрать именно Вам подходящий вуз или колледж? Каждый старшеклассник вместе со своими родителями задается этими вопросами хотя бы раз в жизни. Сегодня на нас льются огромные потоки информации из всевозможных источников. Исключением не является и информация об учебных заведениях. </p>
                             <p class="mb-1 pl-3"><span class="pl-3">Выбрать</span> один достоверный и удобный специализированный источник порой очень сложно. Поэтому наша команда, которая на протяжении 18-ти лет выпускает бумажную версию справочника для выпускников «АБИТУРИЕНТ», создала данный проект в помощь школьникам и их родителям. </p>
-                            <p class=""><span class="pl-3">Мы</span> объединили на одном ресурсе ВСЕ образовательные организации Казахстана. <span class="text-blue-lightish">За Вами только выбор!</span></p>
+                            <p><span class="pl-3">Мы</span> объединили на одном ресурсе ВСЕ образовательные организации Казахстана. <span class="text-blue-lightish">За Вами только выбор!</span></p>
                         </div>
                     </article>
 
                     {{-- Баннер 1 --}}
                     <div class="mb-px">
-                        <img src="https://vipusknik.kz/img/vktek.gif" class="w-full h-auto">
+                        <img src="/img/vktek.gif" class="w-full h-auto">
                     </div>
 
                     {{-- News link --}}
@@ -116,7 +89,7 @@
 
                     {{-- Баннер 2 --}}
                     <div class="mb-3 px-3">
-                        <img src="https://vipusknik.kz/img/vktek.gif" class="w-full h-auto">
+                        <img src="/img/vktek.gif" class="w-full h-auto">
                     </div>
 
                     {{-- Статья --}}
@@ -147,4 +120,3 @@
         </div>
     </div>
 @endsection
-
