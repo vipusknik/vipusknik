@@ -1,25 +1,28 @@
 @include ('carousel')
-@include ('search-input')
+@include ('search-form')
 
-<div class="flex px-4 mb-6">
+<div class="flex px-4 mb-4">
     <div class="w-3/4 mr-3">
         <div class="flex">
             <a href="/articles/kak-podgotovitsya-k-ekzamenam" class="flex-1 flex no-underline text-white font-franklin-gothic">
-                <div class="bg-blue-dark flex-1 text-center p-1">Подготовиться к экзаменам</div>
-                <div class="triangle-topleft"></div>
+                <div class="bg-blue-lightish flex-1 text-center py-2">Подготовиться к экзаменам</div>
+                <div class="triangle-top-left"></div>
             </a>
             <a href="/testent" class="flex-1 flex no-underline text-white font-franklin-gothic">
-                <div class="bg-blue-dark flex-1 text-center p-1">Выбрать профессию</div>
-                <div class="triangle-topleft"></div>
+                <div class="bg-blue-lightish flex-1 text-center py-2">Выбрать профессию</div>
+                <div class="triangle-top-left"></div>
             </a>
             <a href="/ent" class="flex-1 flex no-underline text-white font-franklin-gothic">
-                <div class="bg-blue-dark flex-1 text-center p-1">Посмотреть доп. материал</div>
-                <div class="triangle-topleft"></div>
+                <div class="bg-blue-lightish flex-1 text-center py-2">Посмотреть доп. материал</div>
+                <div class="triangle-top-left"></div>
             </a>
         </div>
 
         <div class="mt-8">
-            <h2 class="font-franklin-gothic font-normal text-blue-lightish text-center uppercase mb-1 text-2xl">
+            <h2 class="mini-article-heading font-hairline flex pl-32 items-center font-franklin-gothic text-blue-lightish text-center uppercase mb-1">
+                <div class="flex h-8 w-10 items-center justify-center bg-blue-dark mr-3">
+                    <img class="w-4 h-auto mt-1" src="/img/icons/question.png">
+                </div>
                 Путеводитель в мир образования
             </h2>
             <article class="text-grey-darkest">
@@ -43,12 +46,15 @@
     <div class="w-1/4 pt-1">
         {{-- Counter--}}
         <div class="bg-blue-darker p-2 text-center font-franklin-gothic antialiased tracking-wide text-white mb-2">
-            до ЕНТ осталось 138 дней
+            {{ \App\Modules\Unt::counterText() }}
         </div>
 
         {{-- News --}}
         <div>
             <div class="mb-1 flex items-center justify-center bg-blue-lightish py-2 font-franklin-gothic uppercase text-2xl text-center text-white">
+                <div class="flex h-8 w-10 items-center justify-center mr-1 -ml-2">
+                    <img class="w-6 h-auto mb-1" src="/img/icons/news.png">
+                </div>
                 Новости
             </div>
 
@@ -56,7 +62,9 @@
                 @foreach ($articles as $article)
                     <div class="py-2 mb-2">
                         <h3 class="text-center font-franklin-gothic mb-1">
-                            <a href="{{ route('articles.show', $article) }}" class="font-normal text-blue-dark no-underline hover:underline">{{ $article->title }}</a>
+                            <a href="{{ route('articles.show', $article) }}" class="font-normal text-blue-dark no-underline hover:underline tracking-tight text-blue-lightish">
+                                {{ $article->title }}
+                            </a>
                         </h3>
                         <article class="text-grey-darkest leading-tight">
                             {{ $article->short_description }}
@@ -69,13 +77,27 @@
 </div>
 
 {{-- Banners --}}
-<div></div>
+<div class="flex mb-4 px-4">
+    <div class="w-1/2 mr-3">
+        <a href="/institutions/colleges/vostochno-kazakhstanskiy-tekhniko-ekonomicheskiy-kolledzh" target="_blank">
+            <img src="/img/vktek.gif" class="w-full h-auto">
+        </a>
+    </div>
+    <div class="w-1/2">
+        <a href="/institutions/colleges/vostochno-kazakhstanskiy-tekhniko-ekonomicheskiy-kolledzh" target="_blank">
+            <img src="/img/vktek.gif" class="w-full h-auto">
+        </a>
+    </div>
+</div>
 
 {{-- Articles --}}
-<div class="flex px-4">
+<div class="flex px-4 bg-right bg-contain bg-no-repeat" style="background-image: url('/img/cheerful-man-and-woman-with-diplomas.jpg'), linear-gradient(to right, #ffffff, #fdfdfd, #fafafa, #f8f7f8, #f6f5f5);">
     <div class="w-3/5">
         <div class="mb-4">
-            <h2 class="font-franklin-gothic font-normal text-blue-lightish text-center uppercase mb-1 text-2xl">
+            <h2 class="mini-article-heading font-hairline flex pl-32 items-center font-franklin-gothic text-blue-lightish text-center uppercase mb-1">
+                <div class="flex h-8 w-10 items-center justify-center bg-blue-dark mr-3">
+                    <img class="w-4 h-auto mt-1" src="/img/icons/mark.png">
+                </div>
                 Выбираю Казахстан!
             </h2>
             <article class="text-grey-darkest p-2">
@@ -84,7 +106,10 @@
         </div>
 
         <div class="mb-2">
-            <h2 class="font-franklin-gothic font-normal text-blue-lightish text-center uppercase mb-1 text-2xl">
+            <h2 class="mini-article-heading font-hairline flex pl-32 items-center font-franklin-gothic text-blue-lightish text-center uppercase mb-1">
+                <div class="flex h-8 w-10 items-center justify-center bg-blue-dark mr-3">
+                    <img class="w-4 h-auto mt-1" src="/img/icons/exclamation.png">
+                </div>
                 Зачем нужно образование?
             </h2>
             <article class="text-grey-darkest p-2">
@@ -93,9 +118,5 @@
         </div>
 
         <h4 class="font-franklin-gothic text-blue-light font-normal text-center text-lg mb-6">Удачи Вам! У Вас все получится!</h4>
-    </div>
-    
-    <div class="w-2/5">
-        <img src="/img/cheerful-man-and-woman-with-diplomas.jpg" alt="">
     </div>
 </div>

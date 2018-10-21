@@ -12,15 +12,18 @@ function get_id($item)
 
 function years($years)
 {
-    if (! is_numeric($years)) return;
+    return conjugate_by_number($years, 'год', 'года', 'лет', 'лет');
+}
 
-    if ($years >= 11 && $years <= 19) return 'лет';
+function conjugate_by_number($number, $one, $twoToFour, $elevenToNineteen, $default)
+{
+    if ($number >= 11 && $number <= 19) return $elevenToNineteen;
 
-    $years = $years % 10;
+    $number = $number % 10;
 
-    if ($years == 1) return 'год';
+    if ($number == 1) return $one;
 
-    if ($years >= 2 && $years <= 4) return 'года';
+    if ($number >= 2 && $number <= 4) return $twoToFour;
 
-    return 'лет';
+    return $default;
 }

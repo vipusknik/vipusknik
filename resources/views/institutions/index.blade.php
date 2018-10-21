@@ -87,24 +87,7 @@
                                                     class="mb-6 px-3 lg:px-6 lg:w-2/3">
                             <div>
                                 @foreach ($institutions as $institution)
-                                    <div class="flex mb-6">
-                                        <div class="w-12 flex-no-shrink mr-2 p-1">
-                                            @if ($institution->hasLogo())
-                                                <a href="{{ route('institutions.show', [ $institutionType, $institution ]) }}" class="block">
-                                                    <img src="{{ asset($institution->logo()->getUrl()) }}" alt="{{ $institution->title }}" class="block w-full">
-                                                </a>
-                                            @endif
-                                        </div>
-
-                                        <div class="flex-1 min-w-0 flex flex-col justify-center px-2 border-orange-light" style="border-left-width: 1.3px">
-                                            <div class="mb-1">
-                                                <a href="{{ route('institutions.show', [ $institutionType, $institution ]) }}" class="text-blue-dark no-underline hover:underline">{{ $institution->title }}</a>
-                                            </div>
-                                            <div class="text-sm text-grey-dark">
-                                                Город: {{ $institution->city->title }}
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @include ('institutions.partials.institution-in-list')
                                 @endforeach
 
                                 <institution v-for="(institution, index) in list"

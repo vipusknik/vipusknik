@@ -2,6 +2,21 @@
 
 @section ('title', 'Портал для абитуриентов')
 
+@section ('styles')
+    <style>
+        .triangle-top-left {
+            width: 0;
+            height: 0;
+            border-top: 34px solid #428cae;
+            border-right: 26px solid transparent;
+        }
+
+        .mini-article-heading {
+            font-size: 1.65rem
+        }
+    </style>
+@endsection
+
 @section('content')
     <div class="min-h-screen flex flex-col">
         @component('layouts.header')
@@ -110,13 +125,3 @@
     </div>
 @endsection
 
-@section ('styles')
-    <style>
-        .triangle-topleft {
-            width: 0;
-            height: 0;
-            border-top: 26px solid #2f84a9;
-            border-right: 20px solid transparent;
-        }
-    </style>
-@endsection
