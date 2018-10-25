@@ -89,7 +89,7 @@
 
                     {{-- Баннер 2 --}}
                     <div class="mb-3 px-3">
-                        <img src="/img/Langberry.gif" class="w-full h-auto">
+                        <img src="/img/langberry.gif" class="w-full h-auto">
                     </div>
 
                     {{-- Статья --}}
