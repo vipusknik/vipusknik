@@ -148,6 +148,15 @@
                                 </div>
                             </div>
                         @endif
+
+                        <div class="flex flex-wrap px-3 md:flex-no-wrap">
+                            <div class="w-full md:w-1/2 md:mr-2">
+                                <a href="/institutions/colleges/vostochno-kazakhstanskiy-tekhniko-ekonomicheskiy-kolledzh"><img src="/img/vktek.gif" class="w-full h-auto"></a>
+                            </div>
+                            <div class="w-full md:w-1/2">
+                                <a href="http://langberry.kz"><img src="/img/langberry.gif" class="w-full h-auto"></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>
