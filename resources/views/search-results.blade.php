@@ -136,7 +136,7 @@
                                                             </div>
                                                             <div class="text-sm text-grey-dark">
                                                                 @foreach ($specialty->qualifications as $qualification)
-                                                                    <div>{{ $qualification->title }}</div>
+                                                                    <div>{!! apply_class_on_match($qualification->title, request('query'), 'text-blue') !!}</div>
                                                                 @endforeach
                                                             </div>
                                                         </div>

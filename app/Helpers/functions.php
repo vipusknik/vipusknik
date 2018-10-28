@@ -29,3 +29,9 @@ function conjugate_by_number($number, $one, $twoToFour, $elevenToNineteen, $defa
 
     return $default;
 }
+
+
+function apply_class_on_match($text, $match, $class)
+{
+    return str_replace($match, "<span class='{$class}'>{$match}</span>", $text);
+}
