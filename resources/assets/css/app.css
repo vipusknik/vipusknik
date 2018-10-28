@@ -173,6 +173,6 @@ button:focus {
     }
 
     .main-page-articles-bg {
-        background-color: #f6f6f6 !important;
+        background-image: linear-gradient(to bottom, #f6f6f6, #f4f4f5, #f1f1f4, #efeff2, #edecf1)
     }
 }
