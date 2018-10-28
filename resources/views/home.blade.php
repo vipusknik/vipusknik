@@ -63,7 +63,7 @@
 
                     {{-- News link --}}
                     <div class="mb-3 bg-orange py-2 flex items-center justify-center">
-                        <a href="#" class="flex items-center justify-center no-underline">
+                        <a href="{{ route('news') }}" class="flex items-center justify-center no-underline">
                             <div class="flex items-center justify-center w-10 h-8 bg-blue-lightish mr-3">
                                 <img class="w-6 h-auto" src="/img/icons/news.png">
                             </div>

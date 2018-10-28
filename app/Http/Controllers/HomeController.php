@@ -12,4 +12,11 @@ class HomeController extends Controller
 
         return view('home', compact('articles'));
     }
+
+    public function news()
+    {
+        $news = Article::orderBy('created_at')->get();
+
+        return view('news.index', compact('news'));
+    }
 }

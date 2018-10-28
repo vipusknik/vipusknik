@@ -9,6 +9,8 @@ Route::get('/price', 'CommerceController@index')->name('welcome2');
 
 Route::get('/search', 'SearchController@index');
 
+Route::get('/news', 'HomeController@news')->name('news');
+
 /**
  * Institutions
  */
