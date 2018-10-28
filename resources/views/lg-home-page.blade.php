@@ -85,7 +85,7 @@
     </div>
     <div class="w-1/2">
         <a href="http://langberry.kz" target="_blank">
-            <img src="/img/langberry.gif" class="w-full h-auto">
+            <img src="/img/langberry_new.gif" class="w-full h-auto">
         </a>
     </div>
 </div>

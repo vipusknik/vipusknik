@@ -154,7 +154,7 @@
                                 <a href="/institutions/colleges/vostochno-kazakhstanskiy-tekhniko-ekonomicheskiy-kolledzh"><img src="/img/vktek.gif" class="w-full h-auto"></a>
                             </div>
                             <div class="w-full md:w-1/2">
-                                <a href="http://langberry.kz"><img src="/img/langberry.gif" class="w-full h-auto"></a>
+                                <a href="http://langberry.kz"><img src="/img/langberry_new.gif" class="w-full h-auto"></a>
                             </div>
                         </div>
                     </div>
