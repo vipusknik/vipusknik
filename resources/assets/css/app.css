@@ -160,3 +160,19 @@ button:focus {
         height: 185px
     }
 }
+
+.cheerfull-man-and-woman-bg {
+    background-image: url('/img/cheerful-man-and-woman-with-diplomas.jpg'), linear-gradient(to right, #ffffff, #fdfdfd, #fafafa, #f8f7f8, #f6f5f5) !important;
+}
+
+@media (max-width: 1400px) {
+    .cheerfull-man-and-woman-bg {
+        background-size: 45% !important;
+        background-position: top right !important;
+        background-image: url('/img/cheerful-man-and-woman-with-diplomas.jpg') !important;
+    }
+
+    .main-page-articles-bg {
+        background-color: #f6f6f6 !important;
+    }
+}
