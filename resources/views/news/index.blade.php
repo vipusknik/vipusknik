@@ -24,7 +24,7 @@
                         @foreach ($news as $article)
                             <div class="py-2 mb-2">
                                 <h3 class="text-center font-franklin-gothic mb-1">
-                                    <a href="{{ route('articles.show', $article) }}" class="font-normal text-blue-dark no-underline hover:underline tracking-tight text-blue-lightish">
+                                    <a href="{{ route('articles.show', $article) }}" class="font-normal text-xl text-blue-dark no-underline hover:underline tracking-tight text-blue-lightish">
                                         {{ $article->title }}
                                     </a>
                                 </h3>
