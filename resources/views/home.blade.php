@@ -58,7 +58,9 @@
 
                     {{-- Баннер 1 --}}
                     <div class="mb-px">
-                        <img src="/img/vktek.gif" class="w-full h-auto">
+                        <a href="/institutions/colleges/vostochno-kazakhstanskiy-tekhniko-ekonomicheskiy-kolledzh" target="_blank">
+                            <img src="/img/vktek.gif" class="w-full h-auto">
+                        </a>
                     </div>
 
                     {{-- News link --}}
@@ -89,7 +91,9 @@
 
                     {{-- Баннер 2 --}}
                     <div class="mb-3 px-3">
-                        <img src="/img/langberry.gif" class="w-full h-auto">
+                        <a href="http://langberry.kz" target="_blank">
+                            <img src="/img/langberry.gif" class="w-full h-auto">
+                        </a>
                     </div>
 
                     {{-- Статья --}}

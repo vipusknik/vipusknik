@@ -84,7 +84,7 @@
         </a>
     </div>
     <div class="w-1/2">
-        <a href="/institutions/colleges/vostochno-kazakhstanskiy-tekhniko-ekonomicheskiy-kolledzh" target="_blank">
+        <a href="http://langberry.kz" target="_blank">
             <img src="/img/langberry.gif" class="w-full h-auto">
         </a>
     </div>
