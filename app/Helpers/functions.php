@@ -12,6 +12,8 @@ function get_id($item)
 
 function years($years)
 {
+    if (! is_numeric($years)) return;
+
     return conjugate_by_number($years, 'год', 'года', 'лет', 'лет');
 }
 
