@@ -1,5 +1,5 @@
 {{-- Carousel --}}
-<div class="flex items-center justify-center text-center px-4 md:pt-5 pb-1 lg:px-12 lg:py-5">
+<div class="flex items-center justify-center text-center px-4 md:pt-5 pb-4 lg:px-12 lg:py-5 carousel-cell">
     <div class="flex justify-end w-1/4 sm:w-1/3 mr-3 lg:mr-0">
         <img src="/img/main-banner-girl.jpg" alt="" class="main-banner-girl block h-24 sm:h-32 md:h-48">
     </div>

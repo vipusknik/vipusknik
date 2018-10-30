@@ -2,6 +2,34 @@
 
 @section ('title', 'Результаты поиска')
 
+@section ('styles')
+    <style>
+        .carousel-cell {
+          width: 100%; /* full width */
+        }
+
+        .flickity-page-dots {
+            bottom: 3px !important;
+        }
+
+        .flickity-page-dots .dot {
+            height: 5px !important;
+            width: 7px !important;
+            border-radius: 0 !important;
+            background: #428cae !important;
+            opacity: 1 !important;
+        }
+
+        .flickity-page-dots .dot.is-selected {
+            background: #EF9C0E !important;
+        }
+
+        .flickity-prev-next-button {
+            background-color: transparent !important;
+        }
+    </style>
+@endsection
+
 @section ('content')
     <div class="min-h-screen flex flex-col">
         @component('layouts.header')
@@ -13,7 +41,10 @@
         <div class="flex-1 mt-2 lg:bg-grey-light lg:mt-0">
             <main class="container mx-auto">
                 <div class="lg:bg-white lg:shadow-lg about-lg:mx-20" style="min-height: 700px">
-                    @include ('carousel')
+                    <div data-flickity='{ "cellAlign": "left", "contain": true, "arrowShape": "M25.87899833350241,50.628999380943 l46.49999681743717,41.628999380943 V9 z" }'>
+                        @include ('carousel')
+                        @include ('carousel')
+                    </div>
 
                     @include ('search-form')
 

@@ -42,6 +42,8 @@
 
     <script src="{{ mix('js/app.js') }}"></script>
 
+    @yield ('script')
+
     @include ('layouts.metrica')
 </body>
 </html>
