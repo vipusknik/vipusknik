@@ -4,10 +4,10 @@
             <!-- tab names -->
             <div ref="tab-names" class="flex justify-end z-10">
                 <div v-for="tab in tabs" @click="select(tab)" class="flex tab text-white cursor-pointer select-none">
-                    <div class="block text-white py-3 pl-6 pr-5" :class="tab.bgClass + (tab.selected ? ' z-20': '')">
+                    <div class="flex items-center text-white text-xs py-1 pl-6 pr-5 lg:py-3 lg:text-sm xl:text-base" :class="tab.bgClass + (tab.selected ? ' z-20': '')">
                         {{ tab.name }}
                     </div>
-                    <div class="triangle z-10" :class="'border-' + tab.bgClass.split('bg-')[1]"></div>
+                    <div class="triangle w-10 h-full" :class="tab.bgClass"></div>
                 </div>
             </div>
 
@@ -64,16 +64,16 @@
 
 <style scoped>
     .tab:not(:first-child) {
-        margin-left: -6px;
+        margin-left: -18px;
     }
 
     .triangle {
-        border-bottom-width: 42px;
-        border-right: 18px solid transparent;
+        -webkit-clip-path: polygon(0 0, 0% 100%, 79% 100%);
+        clip-path: polygon(0 0, 0% 100%, 79% 100%);
     }
 
     .triangle-down {
-        border-bottom-width: 0;
-        border-top-width: 42px;
+        -webkit-clip-path: polygon(0 0, 0% 100%, 79% 0);
+        clip-path: polygon(0 0, 0% 100%, 79% 0);
     }
 </style>

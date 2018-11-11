@@ -139,10 +139,8 @@ button:focus {
 }
 
 .triangle-top-left {
-    width: 0;
-    height: 0;
-    border-top: 34px solid #428cae;
-    border-right: 26px solid transparent;
+    -webkit-clip-path: polygon(0 0, 0% 100%, 79% 0);
+    clip-path: polygon(0 0, 0% 100%, 79% 0);
 }
 
 .mini-article-heading {

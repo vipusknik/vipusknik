@@ -9,16 +9,16 @@
     <div class="w-3/4 mr-3">
         <div class="flex">
             <a href="/articles/kak-podgotovitsya-k-ekzamenam" class="flex-1 flex no-underline text-white font-franklin-gothic">
-                <div class="bg-blue-lightish flex-1 text-center py-2">Подготовиться к экзаменам</div>
-                <div class="triangle-top-left"></div>
+                <div class="bg-blue-lightish flex-1 text-center py-2 flex items-center justify-center">Подготовиться к экзаменам</div>
+                <div class="triangle-top-left h-full w-10 bg-blue-lightish"></div>
             </a>
             <a href="/professions/categories" class="flex-1 flex no-underline text-white font-franklin-gothic">
-                <div class="bg-blue-lightish flex-1 text-center py-2">Выбрать профессию</div>
-                <div class="triangle-top-left"></div>
+                <div class="bg-blue-lightish flex-1 text-center py-2 flex items-center justify-center">Выбрать профессию</div>
+                <div class="triangle-top-left h-full w-10 bg-blue-lightish"></div>
             </a>
             <a href="/ent" class="flex-1 flex no-underline text-white font-franklin-gothic">
-                <div class="bg-blue-lightish flex-1 text-center py-2">Посмотреть доп. материал</div>
-                <div class="triangle-top-left"></div>
+                <div class="bg-blue-lightish flex-1 text-center py-2 flex items-center justify-center">Посмотреть доп. материал</div>
+                <div class="triangle-top-left h-full w-10 bg-blue-lightish"></div>
             </a>
         </div>
 
