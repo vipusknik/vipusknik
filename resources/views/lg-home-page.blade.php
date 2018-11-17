@@ -55,7 +55,7 @@
 
         {{-- News --}}
         <div>
-            <a href="/news" class="mb-1 flex items-center justify-center bg-blue-lightish py-2 font-franklin-gothic uppercase text-2xl text-center text-white">
+            <a href="/news" class="mb-1 flex no-underline items-center justify-center bg-blue-lightish py-2 font-franklin-gothic uppercase text-2xl text-center text-white">
                 <div class="flex h-8 w-10 items-center justify-center mr-1 -ml-2">
                     <img class="w-6 h-auto mb-1" src="/img/icons/news.png">
                 </div>
