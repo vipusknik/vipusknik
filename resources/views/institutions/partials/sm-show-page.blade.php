@@ -76,15 +76,22 @@
 
                     @if (count($qualifications))
                         <div class="px-3 py-1">
-                            <div class="flex justify-between py-2 border-b border-black">
-                                <a href="{{ route('specialties.show', $specialty) }}" class="block text-black no-underline">{{ $specialty->title }}</a>
-                                <div>{{ $specialty->code }}</div>
+                            <div class="w-full flex justify-between items-center py-2 border-b border-black text-grey-darkest antialiased">
+                                <div class="flex-1">
+                                    <a href="{{ route('specialties.show', $specialty) }}" class="block no-underline text-grey-darkest antialiased">{{ $specialty->title }}</a>
+                                </div>
+                                <div class="ml-5 flex-no-shrink">{{ $specialty->code }}</div>
                             </div>
 
                             @foreach ($qualifications as $qualification)
                                 <div class="college-qualification">
-                                    <div class="text-sm py-1">
-                                        {{ $qualification->getNameWithCodeOrName() }}
+                                    <div class="flex items-center text-sm text-grey-darkest py-1">
+                                        <div class="mr-4">
+                                            {{ $qualification->title }}
+                                        </div>
+                                        <div>
+                                            {{ $qualification->code }}
+                                        </div>
                                     </div>
                                     <div class="flex py-2">
                                         <div class="w-1/2 px-2 border-r border-black flex flex-col items-center">
