@@ -51,9 +51,11 @@
             @if ($isUniversity)
                 @foreach ($institution->specialties as $specialty)
                     <div class="px-3 py-1">
-                        <div class="flex justify-between py-2 border-b border-black">
-                            <a href="{{ route('specialties.show', $specialty) }}" class="block text-black no-underline">{{ $specialty->title }}</a>
-                            <div>{{ $specialty->code }}</div>
+                        <div class="flex justify-between items-center py-2 border-b border-black text-grey-darkest">
+                            <div class="flex-1">
+                                <a href="{{ route('specialties.show', $specialty) }}" class="block text-black no-underline text-grey-darkest">{{ $specialty->title }}</a>
+                            </div>
+                            <div class="ml-5 flex-no-shrink">{{ $specialty->code }}</div>
                         </div>
 
                         <div class="flex py-2">
