@@ -108,23 +108,23 @@
         <div class="container mx-auto">
             <div class="about-lg:mx-20">
                 <header class="flex">
-                    <div class="w-1/4 py-3 px-6">
-                        <a href="/">
-                            <img src="{{ asset('/img/vipusknik_logo.png') }}" alt="vipusknik.kz" class="h-6 w-auto lg:h-8">
+                    <div class="flex-no-shrink py-3 px-6 mr-12">
+                        <a href="/" class="block py-px">
+                            <img src="{{ asset('/img/vipusknik_logo.png') }}" alt="vipusknik.kz" class="h-6 w-auto lg:h-8 lg:mt-px">
                         </a>
                     </div>
-                    <div class="w-1/2">
+                    <div>
                         <div class="flex h-full">
-                            <a href="/institutions/universities" class="flex items-center px-6 text-lg text-white tracking-wide no-underline hover:bg-blue-dark">
+                            <a href="/institutions/universities" class="flex items-center px-8 text-xl text-white tracking-wide no-underline hover:bg-blue-dark">
                                 ВУЗы
                             </a>
-                            <a href="/institutions/colleges" class="flex items-center px-6 text-lg text-white tracking-wide no-underline hover:bg-blue-dark">
+                            <a href="/institutions/colleges" class="flex items-center px-8 text-xl text-white tracking-wide no-underline hover:bg-blue-dark">
                                 Колледжи
                             </a>
-                            <a href="/specialties/directions" class="flex items-center px-6 text-lg text-white tracking-wide no-underline hover:bg-blue-dark">
+                            <a href="/specialties/directions" class="flex items-center px-6 text-xl text-white tracking-wide no-underline hover:bg-blue-dark">
                                 Специальности
                             </a>
-                            <a href="/ent" class="flex items-center px-6 text-lg text-white tracking-wide no-underline hover:bg-blue-dark">
+                            <a href="/ent" class="flex items-center px-8 text-xl text-white tracking-wide no-underline hover:bg-blue-dark">
                                 ЕНТ
                             </a>
                         </div>
