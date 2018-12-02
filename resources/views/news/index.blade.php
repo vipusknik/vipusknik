@@ -10,17 +10,18 @@
             @endslot
         @endcomponent
 
-        <div class="container mx-auto">
-            <main>
-                <div>
-                    <div class="mb-1 flex items-center justify-center bg-blue-lightish py-2 font-franklin-gothic uppercase text-2xl text-center text-white">
-                        <div class="flex h-8 w-10 items-center justify-center mr-1 -ml-2">
-                            <img class="w-6 h-auto mb-1" src="/img/icons/news.png">
+        {{-- Контент страницы --}}
+        <div class="flex-1 mt-2 lg:bg-grey-light lg:mt-0">
+            <main class="container mx-auto">
+                <div class="lg:bg-white lg:shadow-lg about-lg:mx-20" style="min-height: 700px">
+                    <div class="px-4">
+                        <div class="mb-1 flex items-center justify-center bg-blue-lightish py-2 font-franklin-gothic uppercase text-2xl text-center text-white">
+                            <div class="flex h-8 w-10 items-center justify-center mr-1 -ml-2">
+                                <img class="w-6 h-auto mb-1" src="/img/icons/news.png">
+                            </div>
+                            Новости
                         </div>
-                        Новости
-                    </div>
 
-                    <div class="px-2">
                         @foreach ($news as $article)
                             <div class="py-2 mb-2">
                                 <h3 class="text-center font-franklin-gothic mb-1">

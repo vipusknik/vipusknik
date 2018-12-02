@@ -9,7 +9,7 @@ class HomeController extends Controller
     public function index()
     {
         $articles = Article::take(3)
-            ->inCategory(4)
+            ->inCategory($topCategoryId = 4)
             ->latest()
             ->get();
 
@@ -18,7 +18,7 @@ class HomeController extends Controller
 
     public function news()
     {
-        $news = Article::orderBy('created_at')->get();
+        $news = Article::latest()->get();
 
         return view('news.index', compact('news'));
     }
