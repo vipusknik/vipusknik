@@ -9,6 +9,7 @@
 <script>
     import Flickity from 'flickity'
     import 'flickity-fullscreen'
+    import 'flickity-imagesloaded'
     import 'flickity/dist/flickity.min.css'
     import 'flickity-fullscreen/fullscreen.css'
 
