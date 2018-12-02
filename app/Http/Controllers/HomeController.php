@@ -8,7 +8,10 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $articles = Article::orderBy('created_at')->take(3)->get();
+        $articles = Article::take(3)
+            ->inCategory(4)
+            ->latest()
+            ->get();
 
         return view('home', compact('articles'));
     }
