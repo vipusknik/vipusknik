@@ -1,6 +1,6 @@
 @extends ('layouts.master')
 
-@section ('title', 'Портал для абитуриентов')
+@section ('title', 'Новости')
 
 @section('content')
     <div class="min-h-screen flex flex-col">

@@ -47,7 +47,7 @@ Route::group(['namespace' => 'Specialty'], function () {
     Route::get('/specialties/directions/{direction}', 'SpecialtiesController@index')->name('specialties.index');
     Route::get('/specialties/{specialty}', 'SpecialtiesController@show')->name('specialties.show');
 
-    Route::get('/specialties', 'SpecialtiesController@search')->name('specialties.search');
+    Route::get('/specialties', 'SpecialtiesController@index')->name('specialties.index');
 
     /**
      * Specialty Institutions
