@@ -3,30 +3,26 @@
 namespace App\Http\Controllers\Specialty;
 
 use App\Http\Controllers\Controller;
+use App\Models\Specialty\SpecialtyDirection;
 
 class SpecialtyDirectionsController extends Controller
 {
-    const DIRECTION_GROUPS = [
-        'agriculture',
-        'educationandgum',
-        'serviceandsociety',
-        'serviceandsocietycollege',
-        'natural',
-        'mandatorysubjects',
-        'technique',
-    ];
-
-    public function index()
+    public function index($institutionType)
     {
-        return view('specialties.directions.index');
+        $directions = SpecialtyDirection::of($institutionType)
+            ->whereNotIn('slug', [ 'bez-napravleniya', 'bez-napravleniya-1' ])
+            ->get();
+
+        return view('specialties.directions.index', compact('directions'));
     }
 
-    public function show(String $group)
+    public function show(SpecialtyDirection $direction)
     {
-        abort_unless (
-            in_array($group, self::DIRECTION_GROUPS), 404
-        );
+        $specialties = Specialty::inDirection($direction)
+            ->orderBy('title')
+            ->with('direction')
+            ->paginate(15);
 
-        return view("specialties.directions.{$group}");
+        return view('specialties.index', compact('specialties', 'direction'));
     }
 }

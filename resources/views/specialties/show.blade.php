@@ -1,90 +1,26 @@
-@extends ('layouts.base')
+@extends ('layouts.master')
 
-@section ('title')
-  {{ $header = translate($specialty->type, 'i', 's', true) . ' "' . $specialty->title . '"' }}
-@endsection
+@section ('title', 'Специальности')
 
-@section ('content')
-<div id="subpage">
-    <div style="width:655px;">
-        <h1> {{ $header }} </h1>
-    </div>
-    <div class="ui very relaxed grid">
-        <div class="ten wide column">
-            <div class="ui grid">
-                @if ($specialty->code)
-                  <div class="three wide column">
-                      <h5 class="ui header">Код:</h5>
-                      <div class="content">{{ $specialty->code }}</div>
-                  </div>
-                @endif
-                @if ($specialty->subjects->count() == 2)
-                  <div class="six wide column">
-                      <h5 class="ui header">Профильные предметы:</h5>
-                      <div class="content">
-                          {{ $specialty->subjects[0]->title }}, {{ $specialty->subjects[1]->title }}
-                      </div>
-                  </div>
-                @endif
-                @if ($specialty->typeIs('qualification'))
-                  @if(isset($specialty->specialty))
-                    <div class="seven wide column">
-                        <h5 class="ui header">Специальность:</h5>
-                        <div class="content">
-                            <a href="{{ route('specialties.show', $specialty->specialty)}}">
-                              {{ $specialty->specialty->title }}
-                            </a>
-                        </div>
-                    </div>
-                  @endif
-                @else
-                  @if(isset($specialty->direction) && ! $specialty->direction->is_default)
-                    <div class="seven wide column">
-                        <h5 class="ui header">Наравление:</h5>
-                        <div class="content">
-                            <a href="{{ route('specialties.index', $specialty->direction)}}">
-                              {{ $specialty->direction->title }}
-                            </a>
-                        </div>
-                    </div>
-                  @endif
-                @endif
-            </div>
-            <br>
-            <div class="ui divider"></div>
-            @if ($specialty->description)
-              {!! $specialty->description !!}
-            <br>
-            @endif
-            <br>
-        </div>
-        <div class="one wide column"></div>
-        <div class="five wide column" style="position: absolute; right: 35px; top: 190px;">
-            <div class="ui segment" style="margin-top:-175px;">
-                <h3>Где учиться?</h3>
-                <a href="{{ route('specialties.institutions.index', [$specialty->institution_type, $specialty]) }}" class="header">
-                  Учебные заведения
-                </a>
-            </div>
-            <div class="ui segment">
-                <div class="eleven wide column">
-                    <h3 style="margin-bottom: 33px;">Связанные Профессии</h3>
+@section('content')
+    <div class="min-h-screen flex flex-col">
+        @component('layouts.header')
+            @slot ('smHeaderDropdownMenu')
+                @include ('search-form')
+            @endslot
+        @endcomponent
+
+        {{-- Контент страницы --}}
+        <div class="flex-1 mt-2 lg:bg-grey-light lg:mt-0">
+            <main class="container mx-auto">
+                <div class="lg:bg-white lg:shadow-lg about-lg:mx-20 flex flex-col" style="min-height: 700px">
+                    {{--  --}}
                 </div>
-                <div class="ui very relaxed divided list">
-                    <div class="item">
-                        <div class="content">
-                            @foreach ($specialty->professions as $profession)
-                              <a href="{{ route('professions.show', $profession) }}"
-                                 class="header">
-                              <i class="small teal travel middle aligned icon"></i>
-                              {{ $profession->title }}</a><br>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </main>
         </div>
-        <br>
+
+        <div class="hidden lg:block">
+            @include('layouts.footer')
+        </div>
     </div>
-</div>
 @endsection

@@ -61,14 +61,14 @@
                         </div>
 
                         <div class="flex flex-col md:px-24 mb-8 lg:px-48 order-2 sm:order-3">
-                            <a href="#" class="flex mb-3 no-underline">
+                            <a href="{{ route('specialties.directions.index', 'college') }}" class="flex mb-3 no-underline">
                                 <div class="bg-blue-light flex items-center justify-center w-24 h-12 sm:w-16 sm:h-10 lg:h-12 xl:h-10 mr-2 sm:mr-3 flex-none">
                                     <img class="w-5 h-auto" src="/img/icons/site-categories/colleges.png" alt="Специальности колледжа">
                                 </div>
                                 <div class="text-white justify-center bg-orange flex items-center px-4 text-center text-xl xl:text-base flex-1 hover:underline">Специальности колледжа</div>
                             </a>
 
-                            <a href="#" class="flex no-underline">
+                            <a href="{{ route('specialties.directions.index', 'university') }}" class="flex no-underline">
                                 <div class="bg-blue-light flex items-center justify-center w-24 h-12 sm:w-16 sm:h-10 lg:h-12 xl:h-10 mr-2 sm:mr-3 flex-none">
                                     <img class="w-8 h-auto" src="/img/icons/site-categories/universities.png" alt="Бакалавриат">
                                 </div>

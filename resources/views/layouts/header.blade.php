@@ -48,7 +48,7 @@
                             </div>
                         </a>
 
-                        <a href="/specialties/directions" class="block no-underline px-6 py-2 hover:bg-blue-darker tracking-wide">
+                        <a href="/specialties" class="block no-underline px-6 py-2 hover:bg-blue-darker tracking-wide">
                             <div class="flex items-center text-white">
                                 <div class="w-10 flex-no-shrink text-center mr-8">
                                     <img src="/img/icons/site-categories/specialties.png" alt="Специальности" class="h-6">
@@ -121,7 +121,7 @@
                             <a href="/institutions/colleges" class="flex items-center px-8 text-xl text-white tracking-wide no-underline hover:bg-blue-dark">
                                 Колледжи
                             </a>
-                            <a href="/specialties/directions" class="flex items-center px-6 text-xl text-white tracking-wide no-underline hover:bg-blue-dark">
+                            <a href="/specialties" class="flex items-center px-6 text-xl text-white tracking-wide no-underline hover:bg-blue-dark">
                                 Специальности
                             </a>
                             <a href="/ent" class="flex items-center px-8 text-xl text-white tracking-wide no-underline hover:bg-blue-dark">
