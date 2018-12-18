@@ -56,7 +56,9 @@
                             @foreach ($directions as $direction)
                                 <div class="flex items-start w-full mb-4 md:w-1/2 md:mb-10 md:pl-6">
                                     <div class="flex-none mr-2">
-                                        <i class="student icon text-blue-lightish"></i>
+                                        <div class="w-5 h-5 text-blue-lightish">
+                                            {!! $direction->icon_html !!}
+                                        </div>
                                     </div>
 
                                     <div class="flex-1">
