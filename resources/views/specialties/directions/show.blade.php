@@ -54,13 +54,13 @@
                     @include ('search-form')
 
                     <div>
-                        <div class="px-4 py-8 md:px-24">
+                        <div class="px-4 py-4 md:py-8 md:px-24">
                             <h3 class="text-blue-lightish uppercase font-normal tracking-wide">{{ $direction->title }}</h3>
                         </div>
 
                         <div>
                             @foreach ($specialties as $specialty)
-                                <a href="{{ route('specialties.show', $specialty) }}" class="flex specialty px-4 md:px-24 text-grey-darkest hover:no-underline">
+                                <a href="{{ route('specialties.show', $specialty) }}" class="text-sm md:text-base lg:text-xl xl:text-base flex specialty px-4 md:px-24 text-grey-darkest hover:no-underline">
                                     <div class="w-7/8 mr-3 border-r-8 border-white py-2">
                                         <div class="border-l-2 border-orange pl-4">
                                             {{ $specialty->title }}
