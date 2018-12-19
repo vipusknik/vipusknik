@@ -3,8 +3,11 @@
 @section ('title', 'Специальности')
 
 @section ('styles')
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.min.css">
     <style>
+        .specialty:nth-child(odd) {
+            background-color: #DEDEDC;
+        }
+
         .carousel-cell {
           width: 100%; /* full width */
         }
@@ -50,27 +53,21 @@
 
                     @include ('search-form')
 
-                    <div class="px-4 py-5 md:px-24 md:py-10">
-                        <div class="flex flex-wrap">
-                            @foreach ($directions as $direction)
-                                <div class="flex items-start w-full mb-4 md:w-1/2 md:mb-10 md:pl-6">
-                                    <div class="flex-none mr-2">
-                                        <div class="w-5 h-5 text-blue-lightish">
-                                            {!! $direction->icon_html !!}
-                                        </div>
-                                    </div>
+                    <div>
+                        <div class="px-4 py-8 md:px-24">
+                            <h3 class="text-blue-lightish uppercase font-normal tracking-wide">{{ $direction->title }}</h3>
+                        </div>
 
-                                    <div class="flex-1">
-                                        <h4 class="mb-3">
-                                            <a class="text-base md:text-md text-blue-lightish font-franklin-gothic font-normal hover:no-underline" href="{{ route('specialties.directions.show', $direction) }}">
-                                               {{ $direction->title }}
-                                            </a>
-                                        </h4>
-                                        <div class="text-grey-darker">
-                                            {!! $direction->description !!}
+                        <div>
+                            @foreach ($specialties as $specialty)
+                                <a href="{{ route('specialties.show', $specialty) }}" class="flex specialty px-4 md:px-24 text-grey-darkest hover:no-underline">
+                                    <div class="w-7/8 mr-3 border-r-8 border-white py-2">
+                                        <div class="border-l-2 border-orange pl-4">
+                                            {{ $specialty->title }}
                                         </div>
                                     </div>
-                                </div>
+                                    <div class="w-1/8 flex-none py-2">{{ $specialty->code }}</div>
+                                </a>
                             @endforeach
                         </div>
                     </div>

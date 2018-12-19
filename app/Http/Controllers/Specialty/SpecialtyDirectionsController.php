@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Specialty;
 
+use App\Models\Specialty\Specialty;
 use App\Http\Controllers\Controller;
 use App\Models\Specialty\SpecialtyDirection;
 
@@ -23,6 +24,6 @@ class SpecialtyDirectionsController extends Controller
             ->with('direction')
             ->paginate(15);
 
-        return view('specialties.index', compact('specialties', 'direction'));
+        return view('specialties.directions.show', compact('specialties', 'direction'));
     }
 }
