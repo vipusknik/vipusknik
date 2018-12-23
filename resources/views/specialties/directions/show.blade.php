@@ -59,16 +59,36 @@
                         </div>
 
                         <div>
-                            @foreach ($specialties as $specialty)
-                                <a href="{{ route('specialties.show', $specialty) }}" class="text-sm md:text-base lg:text-xl xl:text-base flex specialty px-4 md:px-24 text-grey-darkest hover:no-underline">
-                                    <div class="w-7/8 mr-3 border-r-8 border-white py-2">
-                                        <div class="border-l-2 border-orange pl-4">
-                                            {{ $specialty->title }}
+                            @if ($direction->institution == 'university')
+                                @foreach ($specialties as $specialty)
+                                    <a href="{{ route('specialties.show', $specialty) }}" class="text-sm md:text-base lg:text-xl xl:text-base flex specialty px-4 md:px-24 text-grey-darkest hover:no-underline">
+                                        <div class="w-3/4 md:w-7/8 mr-3 border-r-8 border-white py-2">
+                                            <div class="border-l-2 border-orange pl-4">
+                                                {{ $specialty->title }}
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="w-1/8 flex-none py-2">{{ $specialty->code }}</div>
-                                </a>
-                            @endforeach
+                                        <div class="w-1/4 md:w-1/8 flex-none py-2">{{ $specialty->code }}</div>
+                                    </a>
+                                @endforeach
+                            @else
+                                @foreach ($specialties as $specialty)
+                                    <a href="{{ route('specialties.show', $specialty) }}" class="flex text-sm md:text-base lg:text-xl xl:text-base text-blue-lightish hover:no-underline my-px md:my-1" style="background-color: #DEDEDC;">
+                                        <div class="w-3/4 md:w-7/8 border-r-8 border-white py-2 md:py-3 pl-6 md:pl-24">{{ $specialty->title }}</div>
+                                        <div class="w-1/4 md:w-1/8 py-2 md:py-3 pl-3">{{ $specialty->code }}</div>
+                                    </a>
+
+                                    @foreach ($specialty->qualifications as $qualification)
+                                        <a href="{{ route('specialties.show', $qualification) }}" class="flex items-center text-sm md:text-base lg:text-xl xl:text-base text-grey-darkest hover:no-underline">
+                                            <div class="w-3/4 md:w-7/8 py-1 md:py-2 pl-2 md:pl-20">
+                                                <div class="border-l-2 border-orange pl-4">
+                                                    {{ $qualification->title }}
+                                                </div>
+                                            </div>
+                                            <div class="w-1/4 md:w-1/8 py-1 md:py-2 pl-3">{{ $qualification->code }}</div>
+                                        </a>
+                                    @endforeach
+                                @endforeach
+                            @endif
                         </div>
                     </div>
                 </div>

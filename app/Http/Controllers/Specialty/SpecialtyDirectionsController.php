@@ -19,10 +19,11 @@ class SpecialtyDirectionsController extends Controller
 
     public function show(SpecialtyDirection $direction)
     {
-        $specialties = Specialty::inDirection($direction)
+        $specialties = Specialty::getOnly('specialties')
+            ->inDirection($direction)
             ->orderBy('title')
             ->with('direction')
-            ->paginate(15);
+            ->get();
 
         return view('specialties.directions.show', compact('specialties', 'direction'));
     }
