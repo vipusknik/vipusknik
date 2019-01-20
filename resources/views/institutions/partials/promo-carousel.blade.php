@@ -34,4 +34,8 @@
     ];
 @endphp
 
+@php
+    $institutionType = str_plural($institutionType);
+@endphp
+
 <institution-promo-carousel heading="{{ $heading }}" :institutions="{{ json_encode(${$institutionType}) }}" :page-dots="{{ json_encode($pageDots) }}"></institution-promo-carousel>
