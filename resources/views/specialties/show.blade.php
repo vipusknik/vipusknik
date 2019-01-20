@@ -72,13 +72,24 @@
                     </article>
 
                     <div id="professions" class="flex bg-orange py-3 px-6 md:px-12 font-franklin-gothic mb-3">
-                        <div class="w-1/4 mr-4 text-white font-normal">Связанные профессии:</div>
-                        <div class="w-3/4 flex flex-col">
+                        <div class="w-1/3 md:w-1/4 mr-4 text-white font-normal">Связанные профессии:</div>
+                        <div class="w-2/3 md:w-3/4 flex flex-col">
                             @foreach ($specialty->professions as $profession)
                                 <a href="{{ route('professions.show', $profession) }}" class="text-white font-franklin-gothic hover:no-underline mb-2">{{ $profession->title }}</a>
                             @endforeach
                         </div>
                     </div>
+
+                    @if ($specialty->type == 'specialty' && $specialty->direction->institution == 'college')
+                        <div id="qualifications" class="flex bg-orange py-3 px-6 md:px-12 font-franklin-gothic mb-3">
+                            <div class="w-1/3 md:w-1/4 mr-4 text-white font-normal">Квалификации:</div>
+                            <div class="w-2/3 md:w-3/4 flex flex-col">
+                                @foreach ($specialty->qualifications as $qualification)
+                                    <a href="{{ route('specialties.show', $qualification) }}" class="text-white font-franklin-gothic hover:no-underline mb-2">{{ $qualification->title }}</a>
+                                @endforeach
+                            </div>
+                        </div>
+                    @endif
                 </div>
             </main>
         </div>
