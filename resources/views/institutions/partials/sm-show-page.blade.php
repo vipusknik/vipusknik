@@ -2,7 +2,7 @@
     <template slot="heading">
         @if ($institution->hasLogo() && $institution->is_paid)
             <div class="mr-2 flex-none">
-                <img src="{{ $institution->logo()->getUrl() }}" alt="{{ $institution->title }}" class="block w-10 h-10">
+                <img src="{{ $institution->logo()->getUrl() }}" alt="{{ $institution->title }}" class="block w-10 h-auto">
             </div>
         @endif
 

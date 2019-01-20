@@ -121,8 +121,19 @@
                             <a href="/institutions/colleges" class="flex items-center px-8 text-xl text-white tracking-wide no-underline hover:bg-blue-dark">
                                 Колледжи
                             </a>
-                            <a href="/specialties" class="flex items-center px-6 text-xl text-white tracking-wide no-underline hover:bg-blue-dark">
-                                Специальности
+                            <a href="/specialties" class="group relative text-xl text-white tracking-wide no-underline hover:bg-blue-dark">
+                                <div class="flex h-full items-center px-6">Специальности</div>
+                                <div class="bg-white h-1"></div>
+                                <div class="absolute z-10 hidden group-hover:block w-full bg-blue-dark">
+                                    <div class="text-center text-white py-3 text-lg hover:bg-blue-darker"
+                                         onclick="event.preventDefault(); window.location.href='{{ route('specialties.directions.index', 'university') }}'">
+                                        Бакалавриат
+                                    </div>
+                                    <div class="text-center text-white py-3 text-lg hover:bg-blue-darker"
+                                         onclick="event.preventDefault(); window.location.href='{{ route('specialties.directions.index', 'college') }}'">
+                                        Специальности и квалификации коледжа
+                                    </div>
+                                </div>
                             </a>
                             <a href="/ent" class="flex items-center px-8 text-xl text-white tracking-wide no-underline hover:bg-blue-dark">
                                 ЕНТ
