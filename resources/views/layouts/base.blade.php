@@ -47,7 +47,7 @@
                     </a>
                 </div>
                 <div id="register1">
-                    <h1 style="margin: 5px; margin-left: 18px; color: white; font-weight: 200;">Выпускник 2018</h1>
+                    <h1 style="margin: 5px; margin-left: 18px; color: white; font-weight: 200;">Выпускник 2019</h1>
                 </div>
             </div>
         </div>
@@ -109,19 +109,19 @@
         </div>
     </body>
      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116466974-1"></script>
-    
+
     <script>
-    
+
       window.dataLayer = window.dataLayer || [];
-    
+
       function gtag(){dataLayer.push(arguments);}
-    
+
       gtag('js', new Date());
-    
-    
-    
+
+
+
       gtag('config', 'UA-116466974-1');
-    
+
     </script>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
