@@ -28,7 +28,7 @@
         [
             'name' => 'Астанинский технико-экономический колледж',
             'city' => 'Астана',
-            'logo' => '/storage/333/astaninskiy-tekhniko-ekonomicheskiy-kolledzh-atekpng.png',
+            'logo' => 'http://mustim09.beget.tech/storage/333/astaninskiy-tekhniko-ekonomicheskiy-kolledzh-atekpng.png',
             'link' => '/institutions/colleges/astaninskiy-tekhniko-ekonomicheskiy-kolledzh'
         ],
     ];
