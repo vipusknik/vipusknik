@@ -43,7 +43,6 @@
                 <div class="lg:bg-white lg:shadow-lg about-lg:mx-20" style="min-height: 700px">
                     <div data-flickity='{ "cellAlign": "left", "contain": true, "arrowShape": "M25.87899833350241,50.628999380943 l46.49999681743717,41.628999380943 V9 z", "imagesLoaded": true, "autoPlay": true }'>
                         @include ('carousel')
-                        @include ('carousel')
                     </div>
 
                     @include ('search-form')
