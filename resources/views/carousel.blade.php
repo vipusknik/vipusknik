@@ -2,6 +2,7 @@
     $banners = [
         '/img/main-banner.jpg',
         '/img/avicenna-main-banner.jpg',
+        '/img/vita-main-banner.jpg',
     ];
 @endphp
 
