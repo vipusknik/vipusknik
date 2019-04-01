@@ -42,9 +42,7 @@
         <div class="flex-1 mt-2 lg:bg-grey-light lg:mt-0">
             <main class="container mx-auto">
                 <div class="lg:hidden">
-                    <div data-flickity='{ "cellAlign": "left", "contain": true, "arrowShape": "M25.87899833350241,50.628999380943 l46.49999681743717,41.628999380943 V9 z", "imagesLoaded": true, "autoPlay": true }'>
-                        @include('carousel')
-                    </div>
+                    @include('carousel')
                     {{-- Счетчик дней до ент --}}
                     <div class="py-1 text-center bg-orange text-white leading-normal">
                         {{ \App\Modules\Unt::counterText() }}

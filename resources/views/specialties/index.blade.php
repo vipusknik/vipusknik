@@ -43,9 +43,7 @@
             <main class="container mx-auto">
                 <div class="lg:bg-white lg:shadow-lg about-lg:mx-20 flex flex-col" style="min-height: 700px">
                     <div class="mb-12 sm:mb-6">
-                        <div data-flickity='{ "cellAlign": "left", "contain": true, "arrowShape": "M25.87899833350241,50.628999380943 l46.49999681743717,41.628999380943 V9 z", "imagesLoaded": true, "autoPlay": true }'>
-                            @include ('carousel')
-                        </div>
+                        @include ('carousel')
                     </div>
 
                     <div class="flex flex-col px-6 md:px-32">
