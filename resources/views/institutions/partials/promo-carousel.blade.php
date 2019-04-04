@@ -19,10 +19,10 @@
 
     $colleges = [
         [
-            'name' => 'Алматинский колледж менеджмента и сервиса',
-            'city' => 'Алматы',
-            'logo' => 'http://mustim09.beget.tech/storage/323/logo-1png.png',
-            'link' => '/institutions/colleges/almatinskiy-kolledzh-menedzhmenta-i-servisa'
+            'name' => 'Государственный высший медицинский колледж имени Д. Калматаева',
+            'city' => 'Семей',
+            'logo' => 'http://mustim09.beget.tech/storage/1296/kalmataeva-2png.png',
+            'link' => 'https://www.vipusknik.kz/institutions/college/gosudarstvennyy-meditsinskiy-kolledzh-imeni-dkalmataeva'
         ],
 
         [
