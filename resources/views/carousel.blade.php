@@ -6,11 +6,6 @@
         ],
 
         [
-            'link' => 'https://www.vipusknik.kz/institutions/college/meditsinskiy-kolledzh-avitsenna',
-            'image' => '/img/avicenna-main-banner.jpg'
-        ],
-
-        [
             'link' => 'http://vitamir.kz/catalog/knigi_/',
             'image' => '/img/vita-main-banner.jpg'
         ],
