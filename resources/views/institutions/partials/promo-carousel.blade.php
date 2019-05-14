@@ -19,17 +19,23 @@
 
     $colleges = [
         [
+            'name' => 'Колледж агробизнеса и экономики Казпотребсоюза',
+            'city' => 'Семей',
+            'logo' => http://mustim09.beget.tech/storage/433/20png.png',
+            'link' => '/institutions/colleges/kolledzh-agrobiznesa-i-ekonomiki-kazpotrebsoyuza'
+        ],
+		
+        [
+            'name' => 'Усть-Каменогорский политехнический колледж',
+            'city' => 'Усть-Каменогорский',
+            'logo' => 'http://mustim09.beget.tech/storage/279/kgkp-ust-kamenogorskiy-politekhnicheskiy-kolledzh-logopng.png',
+            'link' => '/institutions/college/ust-kamenogorskiy-politekhnicheskiy-kolledzh'
+        ],
+		[
             'name' => 'Государственный высший медицинский колледж имени Д. Калматаева',
             'city' => 'Семей',
             'logo' => 'http://mustim09.beget.tech/storage/1296/kalmataeva-2png.png',
             'link' => 'https://www.vipusknik.kz/institutions/college/gosudarstvennyy-meditsinskiy-kolledzh-imeni-dkalmataeva'
-        ],
-
-        [
-            'name' => 'Астанинский технико-экономический колледж',
-            'city' => 'Астана',
-            'logo' => 'http://mustim09.beget.tech/storage/333/astaninskiy-tekhniko-ekonomicheskiy-kolledzh-atekpng.png',
-            'link' => '/institutions/colleges/astaninskiy-tekhniko-ekonomicheskiy-kolledzh'
         ],
     ];
 @endphp
