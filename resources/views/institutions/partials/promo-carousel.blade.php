@@ -3,10 +3,10 @@
 
     $universities = [
         [
-            'name' => 'Академический инновационный университет',
+            'name' => 'Колледж агробизнеса и экономики Казпотребсоюза',
             'city' => 'Семей',
-            'logo' => 'http://mustim09.beget.tech/storage/389/8cca0jpg.jpeg',
-            'link' => '/institutions/university/akademicheskiy-innovatsionnyy-universitet'
+            'logo' => '/logo-top/7013.png',
+            'link' => 'http://vipusknik.kz/institutions/colleges/kolledzh-agrobiznesa-i-ekonomiki-kazpotrebsoyuza'
         ],
 
         [
