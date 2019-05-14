@@ -21,7 +21,7 @@
         [
             'name' => 'Колледж агробизнеса и экономики Казпотребсоюза',
             'city' => 'Семей',
-            'logo' => http://mustim09.beget.tech/storage/433/20png.png',
+            'logo' => 'http://mustim09.beget.tech/storage/433/20png.png',
             'link' => '/institutions/colleges/kolledzh-agrobiznesa-i-ekonomiki-kazpotrebsoyuza'
         ],
 		
