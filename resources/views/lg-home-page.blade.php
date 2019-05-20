@@ -85,7 +85,7 @@
         </a>
     </div>
     <div class="w-1/2">
-        <a href="http://vipusknik.kz/institutions/college/ust-kamenogorskiy-mnogoprofilnyy-tehnologicheskiy-kolledzh-kgu" target="_blank">
+        <a href="http://vipusknik.kz/institutions/college/ust-kamenogorskiy-mnogoprofilnyy-tehnologicheskiy-kolledzh" target="_blank">
             <img src="/img/mnogopr.jpg" class="w-full h-auto">
         </a>
     </div>
