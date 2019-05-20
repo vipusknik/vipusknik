@@ -131,7 +131,7 @@
 
                     {{-- Баннер 2 --}}
                     <div class="mb-3 px-3">
-                        <a href="http://vipusknik.kz/institutions/colleges/ust-kamenogorskiy-mnogoprofilnyy-tehnologicheskiy-kolledzh-kgu" target="_blank">
+                        <a href="http://vipusknik.kz/institutions/college/ust-kamenogorskiy-mnogoprofilnyy-tehnologicheskiy-kolledzh-kgu" target="_blank">
                             <img src="/img/mnogopr.jpg" class="w-full h-auto">
                         </a>
                     </div>
