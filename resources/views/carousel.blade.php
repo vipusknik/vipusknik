@@ -4,10 +4,14 @@
             'link' => 'https://www.vipusknik.kz/',
             'image' => '/img/main-banner.jpg'
         ],
-
-        [
-            'link' => 'http://vitamir.kz/catalog/knigi_/',
-            'image' => '/img/vita-main-banner.jpg'
+		
+		[
+            'image' => '/img/travelbook.jpg'
+        ],
+		
+		[
+            'link' => 'http://otdyh-vko.kz/',
+            'image' => '/img/otdyh-vko.jpg'
         ],
     ];
 @endphp
