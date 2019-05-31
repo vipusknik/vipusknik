@@ -12,7 +12,7 @@
 		[
             'link' => 'http://otdyh-vko.kz/',
             'image' => '/img/otdyh-vko.jpg'
-        ],
+        ]
     ];
 @endphp
 
