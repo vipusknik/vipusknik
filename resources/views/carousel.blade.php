@@ -6,6 +6,7 @@
         ],
 		
 		[
+			'link' => '',
             'image' => '/img/travelbook.jpg'
         ],
 		
